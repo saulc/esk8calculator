@@ -65,9 +65,18 @@
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
     
-        <div class="row">
-        <h3>Battery information</h3>
-           <p id="batteryinfo"</p>
+          <div class="row">
+          <div class="col-md-4">
+          <h3>Battery information</h3>
+          </div>
+
+           <div class="col-md-2">
+            <h4><p id="batteryinfo"</p></h4>
+           </div>
+
+             <div class="col-md-3">
+            <h3>Drive Train</h3>
+          </div>
         </div>
       
 
@@ -125,8 +134,94 @@
             <td class="col-md-1"><p id="batteryenergy"></p></td>
             <td class="col-md-1">Watt-Hours (W-hr)</td>
           </tr>
+           <tr class="info">
+            <td class="col-md-1">Estimated Range: </td>
+            <td class="col-md-1"><p id="range"></p></td>
+            <td class="col-md-1">Miles</td>
+          </tr>
         </table>
         </div>
+
+        <!-- drive line col -->
+         <div class="col-md-4">
+          <div class="input-group">
+            <div class="input-group-addon">Motor </div>
+            <input type="text" class="form-control" id="kv" value="200">
+            <div class="input-group-addon">kv</div>
+
+            <input type="text" class="form-control" id="poles" value="14">
+            <div class="input-group-addon">poles</div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-addon">Efficiency </div>
+            <input type="text" class="form-control" id="eff" value="90">
+            <div class="input-group-addon">%</div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-addon">Wheel size </div>
+            <input type="text" class="form-control" id="wheel" value="80">
+            <div class="input-group-addon">mm</div>
+          </div>
+           <div class="input-group">
+            <div class="input-group-addon">Motor pulley </div>
+            <input type="text" class="form-control" id="mp" value="15">
+            <div class="input-group-addon">Teeth</div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-addon">Wheel pulley </div>
+            <input type="text" class="form-control" id="wp" value="36">
+            <div class="input-group-addon">Teeth</div>
+          </div>
+           <div class="input-group">
+            <div class="input-group-addon">Estimated Energy Use </div>
+            <input type="text" class="form-control" id="wpm" value="18">
+            <div class="input-group-addon">Whr per mile</div>
+          </div>
+        </div>
+        </form>
+        
+
+        <!-- drive output -->
+           <div class="col-md-2">
+               <table class="table table-striped table-condensed">
+            <tr class="danger">
+            <td class="col-md-1"><p id="erpm"></p></td>
+            <td class="col-md-1"> Max Erpm</td>
+          </tr>
+           <tr class="danger">
+            <td class="col-md-1"><p id="erpmload"></p></td>
+            <td class="col-md-1"> Erpm Loaded</td>
+          </tr>
+          <tr class="success">
+            <td class="col-md-1"><p id="motorrpm"></p></td>
+            <td class="col-md-1"> Max rpm</td>
+          </tr>
+          <tr class="success">
+            <td class="col-md-1"><p id="motorrpmload"></p></td>
+            <td class="col-md-1"> rpm Loaded</td>
+          </tr>
+         <tr class="info">
+            <td class="col-md-1"><p id="wheelrpm"></p></td>
+            <td class="col-md-1"> rpm Wheel</td>
+          </tr>
+           <tr class="info">
+            <td class="col-md-1"><p id="ratio"></p></td>
+            <td class="col-md-1"> Gear Ratio</td>
+          </tr>
+           <tr class="warning">
+            <td class="col-md-1"><p id="speed"></p></td>
+            <td class="col-md-1"> mph</td>
+          </tr>
+           <tr class="warning">
+            <td class="col-md-1"><p id="speedk"></p></td>
+            <td class="col-md-1"> kph</td>
+          </tr>
+        </table>
+
+           </div>
+
+          </div> <!-- /row -->
+        
       </div>
     
    
