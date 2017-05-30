@@ -4,7 +4,7 @@ function calc() {
     var s =  document.getElementById("scells").value;
     var p =  document.getElementById("pcells").value;
     var c =  document.getElementById("cc").value;
-    var text = s + "s" + p +"p " + (c*p) + "Ah";
+    var text = s + "s" + p +"p " + (c*p).toFixed(2) + "Ah";
     document.getElementById("batteryinfo").innerHTML = text;
     text = t*s;
     document.getElementById("batteryvol").innerHTML = text.toFixed(2);
