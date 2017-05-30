@@ -95,8 +95,12 @@
             <option value="3.6">Li-ion 3.6V</option>
              <option value="3.3">LiFePO4 3.3V</option>
               <option value="12">SLA 12V</option>
-          </select></div>
-       
+          </select>
+        <label>
+          <input type="checkbox" id="usec" onblur="calc()" checked="true"> Use C ratings
+        </label>
+      </div>
+    
           <label class="sr-only" for="scells"># of cells in series</label>
           <div class="input-group">
             <div class="input-group-addon">#</div>
@@ -115,34 +119,28 @@
           </div>
           <div class="input-group">
             <div class="input-group-addon">Cont. Discharge</div>
-            <input type="text" class="form-control" id="da" value="15" onblur="calc()">
+            <input type="text" class="form-control" id="da" value="50" onblur="calc()">
             <div class="input-group-addon">A</div>
-          </div>
-          <div class="input-group">
-            <div class="input-group-addon">Cont. Discharge</div>
-            <input type="text" class="form-control" id="dc" placeholder="" onblur="calc()">
+            <input type="text" class="form-control" id="dc" value="10" onblur="calc()">
             <div class="input-group-addon">C</div>
           </div>
+         
           <div class="input-group">
-            <div class="input-group-addon">Max Discharge</div>
-            <input type="text" class="form-control" id="mda" value="15" onblur="calc()">
+            <div class="input-group-addon">Max   Discharge :</div>
+            <input type="text" class="form-control" id="mda" value="100" onblur="calc()">
             <div class="input-group-addon">A</div>
-          </div>
-          <div class="input-group">
-            <div class="input-group-addon">Max Discharge</div>
-            <input type="text" class="form-control" id="mdc" placeholder="" onblur="calc()">
+             <input type="text" class="form-control" id="mdc" value="20" onblur="calc()">
             <div class="input-group-addon">C</div>
           </div>
+         
           <div class="input-group">
-            <div class="input-group-addon">Max Cell Charge</div>
+            <div class="input-group-addon">Charge per cell</div>
             <input type="text" class="form-control" id="chargeA" value="5" onblur="calc()">
             <div class="input-group-addon">A</div>
-          </div>
-          <div class="input-group">
-            <div class="input-group-addon">Max Cell Charge</div>
-            <input type="text" class="form-control" id="chargeC" placeholder="" onblur="calc()">
+            <input type="text" class="form-control" id="chargeC" value="1" onblur="calc()">
             <div class="input-group-addon">C</div>
           </div>
+         
 
         </div>
         </form>
@@ -196,6 +194,16 @@
             <td class="col-md-1">Total Battery Voltage:</td>
             <td class="col-md-1"><p id="batteryvol"></p></td>
             <td class="col-md-1">Volts (V)</td>
+          </tr>
+          <tr class="success">
+            <td class="col-md-1">Cont. Battery Power:</td>
+            <td class="col-md-1"><p id="contbatterypower"></p></td>
+            <td class="col-md-1">Watts (W)</td>
+          </tr>
+           <tr class="success">
+            <td class="col-md-1">Max Battery Power:</td>
+            <td class="col-md-1"><p id="batterypower"></p></td>
+            <td class="col-md-1">Watts (W)</td>
           </tr>
           <tr class="danger">
             <td class="col-md-1">Total Battery Capacity: </td>

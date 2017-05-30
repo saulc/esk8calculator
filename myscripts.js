@@ -10,9 +10,18 @@ function calc() {
     var dc =  document.getElementById("dc").value;
     var ca =  document.getElementById("chargeA").value;
     var chc =  document.getElementById("chargeC").value;
-
+    var usec = document.getElementById("usec").checked;
     
-    if(mdc == ""){
+
+        document.getElementById("mdc").disabled = !usec;
+        document.getElementById("dc").disabled = !usec;
+        document.getElementById("chargeC").disabled = !usec;
+
+        document.getElementById("mda").disabled = usec;
+        document.getElementById("da").disabled = usec;
+        document.getElementById("chargeA").disabled = usec;
+   
+    if(!usec){
     document.getElementById("md").innerHTML = (mda * p).toFixed(2);
     document.getElementById("mdc").value = mda/c;
     }
@@ -21,16 +30,16 @@ function calc() {
     document.getElementById("mda").value = mdc*c;
     }
 
-    if(dc == ""){
+    if(!usec){
     document.getElementById("cd").innerHTML = (da * p).toFixed(2);
     document.getElementById("dc").value = da/c;
     }
     else{
-    document.getElementById("dc").innerHTML = (dc*c * p).toFixed(2);
+    document.getElementById("cd").innerHTML = (dc*c * p).toFixed(2);
     document.getElementById("da").value = dc*c;
     }
 
-    if(chc == ""){
+    if(!usec){
     document.getElementById("mc").innerHTML = (ca * p).toFixed(2);
     document.getElementById("chargeC").value = ca/c;
     }else {
@@ -49,6 +58,10 @@ function calc() {
     document.getElementById("batterycap").innerHTML = text.toFixed(2);
      var be = t*s*p*c;
     document.getElementById("batteryenergy").innerHTML = be.toFixed(2);
+    text = t*s*mda*p;
+    document.getElementById("batterypower").innerHTML = text.toFixed(2);
+    text = t*s*da*p;
+    document.getElementById("contbatterypower").innerHTML = text.toFixed(2);
 
     var kv =  document.getElementById("kv").value;
     var ef =  document.getElementById("eff").value;
