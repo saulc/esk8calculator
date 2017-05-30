@@ -4,6 +4,43 @@ function calc() {
     var s =  document.getElementById("scells").value;
     var p =  document.getElementById("pcells").value;
     var c =  document.getElementById("cc").value;
+    var mda =  document.getElementById("mda").value;
+    var mdc =  document.getElementById("mdc").value;
+    var da =  document.getElementById("da").value;
+    var dc =  document.getElementById("dc").value;
+    var ca =  document.getElementById("chargeA").value;
+    var chc =  document.getElementById("chargeC").value;
+
+    
+    if(mdc == ""){
+    document.getElementById("md").innerHTML = (mda * p).toFixed(2);
+    document.getElementById("mdc").value = mda/c;
+    }
+    else{
+    document.getElementById("md").innerHTML = (mdc*c * p).toFixed(2);
+    document.getElementById("mda").value = mdc*c;
+    }
+
+    if(dc == ""){
+    document.getElementById("cd").innerHTML = (da * p).toFixed(2);
+    document.getElementById("dc").value = da/c;
+    }
+    else{
+    document.getElementById("dc").innerHTML = (dc*c * p).toFixed(2);
+    document.getElementById("da").value = dc*c;
+    }
+
+    if(chc == ""){
+    document.getElementById("mc").innerHTML = (ca * p).toFixed(2);
+    document.getElementById("chargeC").value = ca/c;
+    }else {
+        document.getElementById("mc").innerHTML = (chc*c * p).toFixed(2);
+        document.getElementById("chargeA").value = chc*c;
+    
+    }
+
+    document.getElementById("ct").innerHTML = ((c)/ca).toFixed(2);
+
     var text = s + "s" + p +"p " + (c*p).toFixed(2) + "Ah";
     document.getElementById("batteryinfo").innerHTML = text;
     text = t*s;

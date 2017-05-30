@@ -113,6 +113,37 @@
             <input type="text" class="form-control" id="cc" value="5" onblur="calc()">
             <div class="input-group-addon">Ah</div>
           </div>
+          <div class="input-group">
+            <div class="input-group-addon">Cont. Discharge</div>
+            <input type="text" class="form-control" id="da" value="15" onblur="calc()">
+            <div class="input-group-addon">A</div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-addon">Cont. Discharge</div>
+            <input type="text" class="form-control" id="dc" placeholder="" onblur="calc()">
+            <div class="input-group-addon">C</div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-addon">Max Discharge</div>
+            <input type="text" class="form-control" id="mda" value="15" onblur="calc()">
+            <div class="input-group-addon">A</div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-addon">Max Discharge</div>
+            <input type="text" class="form-control" id="mdc" placeholder="" onblur="calc()">
+            <div class="input-group-addon">C</div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-addon">Max Cell Charge</div>
+            <input type="text" class="form-control" id="chargeA" value="5" onblur="calc()">
+            <div class="input-group-addon">A</div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-addon">Max Cell Charge</div>
+            <input type="text" class="form-control" id="chargeC" placeholder="" onblur="calc()">
+            <div class="input-group-addon">C</div>
+          </div>
+
         </div>
         </form>
       </br>
@@ -171,7 +202,7 @@
             <td class="col-md-1"><p id="batterycap"></p></td>
             <td class="col-md-1">Amp-Hours (Ah)</td>
           </tr>
-           <tr class="warning">
+           <tr class="danger">
             <td class="col-md-1">Total Battery Energy: </td>
             <td class="col-md-1"><p id="batteryenergy"></p></td>
             <td class="col-md-1">Watt-Hours (W-hr)</td>
@@ -185,6 +216,26 @@
             <td class="col-md-1">Estimated Range: </td>
             <td class="col-md-1"><p id="rangek"></p></td>
             <td class="col-md-1">Km</td>
+          </tr>
+           <tr class="warning">
+            <td class="col-md-1">Cont. Discharge </td>
+            <td class="col-md-1"><p id="cd"></p></td>
+            <td class="col-md-1">Amps (A)</td>
+          </tr>
+           <tr class="warning">
+            <td class="col-md-1">Max Discharge </td>
+            <td class="col-md-1"><p id="md"></p></td>
+            <td class="col-md-1">Amps (A)</td>
+          </tr>
+           <tr class="warning">
+            <td class="col-md-1">Max Charge </td>
+            <td class="col-md-1"><p id="mc"></p></td>
+            <td class="col-md-1">Amps (A)</td>
+          </tr>
+           <tr class="info">
+            <td class="col-md-1">Charge Time </td>
+            <td class="col-md-1"><p id="ct"></p></td>
+            <td class="col-md-1">Hours </td>
           </tr>
         </table>
         </div>
