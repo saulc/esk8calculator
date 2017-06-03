@@ -12,6 +12,32 @@ function calc() {
     var chc =  document.getElementById("chargeC").value;
     var usec = document.getElementById("usec").checked;
     
+     var usekg = document.getElementById("usekg").checked;
+
+     if(usekg){
+        var weightkg =  document.getElementById("rwk").value;
+        document.getElementById("rw").value = (weightkg *2.2).toFixed(0);
+        var bweightkg =  document.getElementById("bwk").value;
+        document.getElementById("bw").value = (bweightkg *2.2).toFixed(0);
+         document.getElementById("rw").disabled = true;
+         document.getElementById("rwk").disabled = false;
+         document.getElementById("bw").disabled = true;
+         document.getElementById("bwk").disabled = false;
+        
+
+    }else{
+
+        var weight =  document.getElementById("rw").value;
+        document.getElementById("rwk").value = (weight / 2.2).toFixed(0);
+        var bweight =  document.getElementById("bw").value;
+        document.getElementById("bwk").value = (bweight / 2.2).toFixed(0);
+        document.getElementById("rw").disabled = false;
+        document.getElementById("rwk").disabled = true;
+        document.getElementById("bw").disabled = false;
+        document.getElementById("bwk").disabled = true;
+       
+    }
+
 
         document.getElementById("mdc").disabled = !usec;
         document.getElementById("dc").disabled = !usec;
@@ -24,31 +50,32 @@ function calc() {
     if(!usec){
     document.getElementById("md").innerHTML = (mda * p).toFixed(2);
     document.getElementById("mdc").value = mda/c;
+
+    document.getElementById("cd").innerHTML = (da * p).toFixed(2);
+    document.getElementById("dc").value = da/c;
+
+    document.getElementById("mc").innerHTML = (ca * p).toFixed(2);
+    document.getElementById("chargeC").value = ca/c;
+
+    document.getElementById("mc").innerHTML = (ca * p).toFixed(2);
+    document.getElementById("chargeC").value = ca/c;
+
+    document.getElementById("mct").innerHTML = ((c)/ca).toFixed(2);
     }
     else{
     document.getElementById("md").innerHTML = (mdc*c * p).toFixed(2);
     document.getElementById("mda").value = mdc*c;
-    }
-
-    if(!usec){
-    document.getElementById("cd").innerHTML = (da * p).toFixed(2);
-    document.getElementById("dc").value = da/c;
-    }
-    else{
+    
     document.getElementById("cd").innerHTML = (dc*c * p).toFixed(2);
     document.getElementById("da").value = dc*c;
-    }
-
-    if(!usec){
-    document.getElementById("mc").innerHTML = (ca * p).toFixed(2);
-    document.getElementById("chargeC").value = ca/c;
-    }else {
-        document.getElementById("mc").innerHTML = (chc*c * p).toFixed(2);
-        document.getElementById("chargeA").value = chc*c;
     
+    document.getElementById("mc").innerHTML = (chc*c * p).toFixed(2);
+    document.getElementById("chargeA").value = chc*c;
+    
+    document.getElementById("mct").innerHTML = ((1)/chc).toFixed(2);
     }
 
-    document.getElementById("ct").innerHTML = ((c)/ca).toFixed(2);
+    
 
     var text = s + "s" + p +"p " + (c*p).toFixed(2) + "Ah";
     document.getElementById("batteryinfo").innerHTML = text;
@@ -60,8 +87,8 @@ function calc() {
     document.getElementById("batteryenergy").innerHTML = be.toFixed(2);
     text = t*s*mda*p;
     document.getElementById("batterypower").innerHTML = text.toFixed(2);
-    text = t*s*da*p;
-    document.getElementById("contbatterypower").innerHTML = text.toFixed(2);
+    var battpower = t*s*da*p;
+    document.getElementById("contbatterypower").innerHTML = battpower.toFixed(2);
 
     var kv =  document.getElementById("kv").value;
     var ef =  document.getElementById("eff").value;
@@ -84,14 +111,34 @@ function calc() {
     text = s*t*kv*ef*poles;
     document.getElementById("erpmload").innerHTML = text.toFixed(2);
     var temp = wheel/1000000 *3.14159 *60
-    text = temp * s*t*kv*ef/ratio ;
-    document.getElementById("speedk").innerHTML = text.toFixed(2);
-    text = text*.6214;
+    var vk = temp * s*t*kv*ef/ratio ;
+    document.getElementById("speedk").innerHTML = vk.toFixed(2);
+    text = vk*.6214;
     document.getElementById("speed").innerHTML = text.toFixed(2);
     var wpm = document.getElementById("wpm").value;
     var range = be/wpm;
      document.getElementById("range").innerHTML = range.toFixed(2);
      range = range*1.609344;
       document.getElementById("rangek").innerHTML = range.toFixed(2);
+
+      // hill grade calc
+        var bmss =  document.getElementById("bwk").value;
+        var mss =  document.getElementById("rwk").value;
+        bmss = parseInt(bmss);
+        mss = parseInt(mss);
+         mss = (bmss + mss);
+      //km / hr to ms/s
+      vk = vk / 60 / 60;
+      vk = vk*1000;
+      var ti = battpower / (mss * 9.8 * vk);
+      ti = ti * 100;
+      // var a = Math.asin(ti);
+      // var b = Math.tan(a);
+     // ti = b;
+   // document.getElementById("batteryinfo").innerHTML = mss;
+
+    
+    document.getElementById("hillgrade").innerHTML = ti.toFixed(0);
+
     
 }
