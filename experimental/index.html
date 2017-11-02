@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Esk8 Calculator</title>
+    <div style="display:inline-block; vertical-align:top;">
+  <button class="js-copy-bob-btn">Copy Output as Plain Text</button><br /><br />
+</div>
+<div style="display:inline-block;">
+  <textarea id="textarea" class="js-test-textarea" cols="35" rows="4">Try pasting into here to see what you have on your clipboard:
+  
+  </textarea>
+</div>
+
+<link rel="stylesheet" href="style.css">
+
+
+    <script type="text/javascript" src="myscripts.js"></script>
+    <body onload="calc()">
+
+      <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-100135741-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdE jh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Esk8 Today Calculator</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="http://esk8.today">eSk8.today</a></li>
+            
+          </ul>
+       
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div id="main" class="container">
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+    
+          <div class="row">
+          <div class="col-md-4">
+          <h3>Battery information</h3>
+          </div>
+
+           <div class="col-md-2">
+            <h4><p id="batteryinfo"</p></h4>
+           </div>
+
+            
+        </div>
+      
+
+              <!-- user input -->
+              <!-- cell type -->
+             
+     
+       <div class="row">
+          <div class="col-md-4">
+      <form class="form" onblur="calc()">
+        <div class="form-group">
+           <div class="input-group-addon">Cell Type   : 
+           <select id="type">
+            <option value="3.7">Lipo 3.7V</option>
+            <option value="3.6">Li-ion 3.6V</option>
+             <option value="3.3">LiFePO4 3.3V</option>
+              <option value="12">SLA 12V</option>
+          </select>
+        <label>
+          <input type="checkbox" id="usec" onblur="calc()" checked="true"> Use C ratings
+        </label>
+      </div>
+    
+          <label class="sr-only" for="scells"># of cells in series</label>
+          <div class="input-group">
+            <div class="input-group-addon">#</div>
+            <input type="text" class="form-control" id="scells" value="10" onblur="calc()">
+            <div class="input-group-addon">Series</div>
+            <input type="text" class="form-control" id="pcells" value="1" onblur="calc()">
+            <div class="input-group-addon">Parallel</div>
+          </div>
+        
+          <div class="input-group">
+            <div class="input-group-addon">Cell Capacity</div>
+            <input type="text" class="form-control" id="cc" value="5" onblur="calc()">
+            <div class="input-group-addon">Ah</div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-addon">Cont. Discharge</div>
+            <input type="text" class="form-control" id="da" value="50" onblur="calc()">
+            <div class="input-group-addon">A</div>
+            <input type="text" class="form-control" id="dc" value="10" onblur="calc()">
+            <div class="input-group-addon">C</div>
+          </div>
+         
+          <div class="input-group">
+            <div class="input-group-addon">Max   Discharge :</div>
+            <input type="text" class="form-control" id="mda" value="100" onblur="calc()">
+            <div class="input-group-addon">A</div>
+             <input type="text" class="form-control" id="mdc" value="20" onblur="calc()">
+            <div class="input-group-addon">C</div>
+          </div>
+         
+          <div class="input-group">
+            <div class="input-group-addon">Charge per cell</div>
+            <input type="text" class="form-control" id="chargeA" value="5" onblur="calc()">
+            <div class="input-group-addon">A</div>
+            <input type="text" class="form-control" id="chargeC" value="1" onblur="calc()">
+            <div class="input-group-addon">C</div>
+          </div>
+         
+        </div>
+        </form>
+
+
+        <!-- drive line col -->
+          <h3>Drive Train</h3>
+          <div class="input-group">
+            <div class="input-group-addon">Motor </div>
+            <input type="text" class="form-control" id="kv" value="200" onblur="calc()">
+            <div class="input-group-addon">kv</div>
+
+            <input type="text" class="form-control" id="poles" value="14" onblur="calc()">
+            <div class="input-group-addon">poles</div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-addon">Efficiency </div>
+            <input type="text" class="form-control" id="eff" value="90" onblur="calc()">
+            <div class="input-group-addon">%</div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-addon">Wheel size </div>
+            <input type="text" class="form-control" id="wheel" value="80" onblur="calc()">
+            <div class="input-group-addon">mm</div>
+          </div>
+           <div class="input-group">
+            <div class="input-group-addon">Motor pulley </div>
+            <input type="text" class="form-control" id="mp" value="15" onblur="calc()">
+            <div class="input-group-addon">Teeth</div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-addon">Wheel pulley </div>
+            <input type="text" class="form-control" id="wp" value="36" onblur="calc()">
+            <div class="input-group-addon">Teeth</div>
+          </div>
+           <div class="input-group">
+            <div class="input-group-addon">Avg. Energy Use </div>
+            <input type="text" class="form-control" id="wpm" value="18" onblur="calc()">
+            <div class="input-group-addon">W-hr per mile</div>
+          </div>
+        </br>
+          <div class="input-group">
+            <div class="input-group-addon">Rider Weight </div>
+            <input type="text" class="form-control" id="rw" value="160" onblur="calc()">
+            <div class="input-group-addon">lb</div>
+             <input type="text" class="form-control" id="rwk" value="72" onblur="calc()">
+            <div class="input-group-addon">kg</div>
+          </div>
+        
+           <div class="input-group">
+            <div class="input-group-addon">Board Weight </div>
+            <input type="text" class="form-control" id="bw" value="16" onblur="calc()">
+            <div class="input-group-addon">lb</div>
+             <input type="text" class="form-control" id="bwk" value="7" onblur="calc()">
+            <div class="input-group-addon">kg</div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-addon">Use Kg </div>
+            <div class="input-group-addon">
+            <input type="checkbox" id="usekg" onblur="calc()" checked="true">  </div>
+          </div>
+        </form>
+          </div>
+        </br>
+
+
+     <!-- batttry table -->
+          <div class="col-md-4">
+          <table class="table table-striped table-condensed">
+          <tr class="success">
+            <td class="col-md-1">Total Battery Voltage:</td>
+            <td class="col-md-1"><p id="batteryvol"></p></td>
+            <td class="col-md-1">Volts (V)</td>
+          </tr>
+            <tr class="danger">
+            <td class="col-md-1">Total Battery Capacity: </td>
+            <td class="col-md-1"><p id="batterycap"></p></td>
+            <td class="col-md-1">Amp-Hours (Ah)</td>
+          </tr>
+           <tr class="danger">
+            <td class="col-md-1">Total Battery Energy: </td>
+            <td class="col-md-1"><p id="batteryenergy"></p></td>
+            <td class="col-md-1">Watt-Hours (W-hr)</td>
+          </tr>
+          <tr class="success">
+            <td class="col-md-1">Cont. Battery Power:</td>
+            <td class="col-md-1"><p id="contbatterypower"></p></td>
+            <td class="col-md-1">Watts (W)</td>
+          </tr>
+           <tr class="success">
+            <td class="col-md-1">Max Battery Power:</td>
+            <td class="col-md-1"><p id="batterypower"></p></td>
+            <td class="col-md-1">Watts (W)</td>
+          </tr>
+        </table>
+          <table class="table table-striped table-condensed">
+
+           <tr class="info">
+            <td class="col-md-1">Estimated Range: </td>
+            <td class="col-md-1"><p id="range"></p></td>
+            <td class="col-md-1">Miles</td>
+          </tr>
+          <tr class="info">
+            <td class="col-md-1">Estimated Range: </td>
+            <td class="col-md-1"><p id="rangek"></p></td>
+            <td class="col-md-1">Km</td>
+          </tr>
+           <tr class="warning">
+            <td class="col-md-1">Cont. Discharge </td>
+            <td class="col-md-1"><p id="cd"></p></td>
+            <td class="col-md-1">Amps (A)</td>
+          </tr>
+           <tr class="warning">
+            <td class="col-md-1">Max Discharge </td>
+            <td class="col-md-1"><p id="md"></p></td>
+            <td class="col-md-1">Amps (A)</td>
+          </tr>
+           <tr class="warning">
+            <td class="col-md-1">Max Charge </td>
+            <td class="col-md-1"><p id="mc"></p></td>
+            <td class="col-md-1">Amps (A)</td>
+          </tr>
+           <tr class="info">
+            <td class="col-md-1">Min Charge Time </td>
+            <td class="col-md-1"><p id="mct"></p></td>
+            <td class="col-md-1">Hours </td>
+          
+        </table>
+        </div>
+
+        <!-- drive output -->
+           <div class="col-md-3">
+               <table class="table table-striped table-condensed">
+            <tr class="danger">
+            <td class="col-md-1 text-center"><p id="erpm"></p></td>
+            <td class="col-md-1"> Max Erpm</td>
+          </tr>
+           <tr class="danger">
+            <td class="col-md-1 text-center"><p id="erpmload"></p></td>
+            <td class="col-md-1"> Erpm Loaded</td>
+          </tr>
+          <tr class="success">
+            <td class="col-md-1 text-center"><p id="motorrpm"></p></td>
+            <td class="col-md-1"> Max rpm</td>
+          </tr>
+          <tr class="success">
+            <td class="col-md-1 text-center"><p id="motorrpmload"></p></td>
+            <td class="col-md-1"> rpm Loaded</td>
+          </tr>
+         <tr class="info">
+            <td class="col-md-1 text-center"><p id="wheelrpm"></p></td>
+            <td class="col-md-1"> rpm Wheel</td>
+          </tr>
+           <tr class="info">
+            <td class="col-md-1 text-center"><p id="ratio"></p></td>
+            <td class="col-md-1"> Gear Ratio</td>
+          </tr>
+           <tr class="warning">
+            <td class="col-md-1 text-center"><p id="speed"></p></td>
+            <td class="col-md-1"> mph</td>
+          </tr>
+           <tr class="warning">
+            <td class="col-md-1 text-center"><p id="speedk"></p></td>
+            <td class="col-md-1"> kph</td>
+          </tr>
+          <tr class="danger">
+            <td class="col-md-1 text-center"><p id="hillgrade"></p></td>
+            <td class="col-md-1"> Max % Hill Grade</td>
+          </tr>
+        </table>
+
+           </div>
+
+          </div> <!-- /row -->
+        
+      </div>
+    
+   
+
+        <button onclick="javascript:calc()" method="post" type="submit" class="btn btn-primary btn-block">Calculate</button>
+    
+       
+      
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+
+
+
+  </body>
+</html>
