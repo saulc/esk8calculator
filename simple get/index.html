@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Simple Esk8 Calculator</title>
+
+<link rel="stylesheet" href="style.css">
+
+
+    <script type="text/javascript" src="myscripts.js"></script>
+   
+
+      <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-100135741-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdE jh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Esk8 Today Simple Calculator</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+             <li class="active"><a href="http://calc.esk8.today/advanced">Advanced Calculator</a></li>
+
+            <li><a href="http://esk8.today">eSk8.today</a></li>
+            
+          </ul>
+       
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div id="main" class="container">
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+    
+          <div class="row">
+          <div class="col-md-4">
+          <h3>Battery information</h3>
+          </div>
+
+           <div class="col-md-2">
+            <h4><p id="batteryinfo"</p></h4>
+           </div>
+
+            
+        </div>
+      
+
+              <!-- user input -->
+              <!-- cell type -->
+             
+     <form  name="mform"  >
+       <div class="row">
+          <div class="col-md-4">
+      
+
+        <div class="form-group">
+           <div class="input-group-addon">Cell Type   : 
+           <select  name="type">
+            <option value="3.7">Lipo 3.7V</option>
+            <option value="3.6">Li-ion 3.6V</option>
+             <option value="3.3">LiFePO4 3.3V</option>
+              <option value="12">SLA 12V</option>
+          </select>
+        <label>
+          <input onblur="calc()" type="checkbox" id="usec"   checked="true"> Use C ratings
+        </label>
+      </div>
+    
+          <label class="sr-only" for="scells"># of cells in series</label>
+          <div class="input-group">
+            <div class="input-group-addon">#</div>
+            <input onblur="calc()" type="text" class="form-control"  name="scells" value="10"  >
+            <div class="input-group-addon">Series</div>
+            <input onblur="calc()" type="text" class="form-control"  name="pcells" value="1"  >
+            <div class="input-group-addon">Parallel</div>
+          </div>
+        
+          <div class="input-group">
+            <div class="input-group-addon">Cell Capacity</div>
+            <input onblur="calc()" type="text" class="form-control"  name="cc" value="5"  >
+            <div class="input-group-addon">Ah</div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-addon">Cont. Discharge</div>
+            <input onblur="calc()" type="text" class="form-control"  name="da" value="50"  >
+            <div class="input-group-addon">A</div>
+            <input onblur="calc()" type="text" class="form-control"  name="dc" value="10"  >
+            <div class="input-group-addon">C</div>
+          </div>
+         
+          <div class="input-group">
+            <div class="input-group-addon">Max   Discharge :</div>
+            <input onblur="calc()" type="text" class="form-control"  name="mda" value="100"  >
+            <div class="input-group-addon">A</div>
+             <input onblur="calc()" type="text" class="form-control"  name="mdc" value="20"  >
+            <div class="input-group-addon">C</div>
+          </div>
+         
+       
+        </div>
+
+
+        <!-- drive line col -->
+          <h3>Drive Train</h3>
+          <div class="input-group">
+            <div class="input-group-addon">Motor </div>
+            <input onblur="calc()" type="text" class="form-control"  name="kv" value="200"  >
+            <div class="input-group-addon">kv</div>
+
+            <input onblur="calc()" type="text" class="form-control"  name="poles" value="14"  >
+            <div class="input-group-addon">poles</div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-addon">Efficiency </div>
+            <input onblur="calc()" type="text" class="form-control"  name="eff" value="90"  >
+            <div class="input-group-addon">%</div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-addon">Wheel size </div>
+            <input onblur="calc()" type="text" class="form-control"  name="wheel" value="80"  >
+            <div class="input-group-addon">mm</div>
+          </div>
+           <div class="input-group">
+            <div class="input-group-addon">Motor pulley </div>
+            <input onblur="calc()" type="text" class="form-control"  name="mp" value="15"  >
+            <div class="input-group-addon">Teeth</div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-addon">Wheel pulley </div>
+            <input onblur="calc()" type="text" class="form-control"  name="wp" value="36"  >
+            <div class="input-group-addon">Teeth</div>
+          </div>
+           <div class="input-group">
+            <div class="input-group-addon">Avg. Energy Use </div>
+            <input onblur="calc()" type="text" class="form-control"  name="wpm" value="18"  >
+            <div class="input-group-addon">W-hr per mile</div>
+          </div>
+        </br>
+       
+
+                <button onclick="javascript:calc()" type="button"  class="btn btn-primary btn-block">Calculate</button>
+    
+        </form>
+
+          </div>
+        </br>
+
+
+     <!-- batttry table -->
+          <div class="col-md-3">
+          <table class="table table-hover table-condensed">
+         <tr class="danger">
+           <td class="col-md-1">Gear Ratio </td>
+            <td class="col-md-1 text-center"><p id="ratio"></p></td>
+            <td class="col-md-1"> </td>
+          </tr>
+           <tr class="warning">
+             <td class="col-md-1">Loaded Speed: </td>
+            <td class="col-md-1 text-center"><p id="speed"></p></td>
+            <td class="col-md-1"> mph</td>
+          </tr>
+            <tr class="warning">
+            <td class="col-md-1">Loaded Speed: </td>
+            <td class="col-md-1 text-center"><p id="speedk"></p></td>
+            <td class="col-md-1"> kph</td>
+          </tr> 
+          <tr class="active">
+             <td class="col-md-1">Max Speed: </td>
+            <td class="col-md-1 text-center"><p id="mspeed"></p></td>
+            <td class="col-md-1"> mph</td>
+          </tr>
+            <tr class="active">
+            <td class="col-md-1">Max Speed: </td>
+            <td class="col-md-1 text-center"><p id="mspeedk"></p></td>
+            <td class="col-md-1"> kph</td>
+          </tr> 
+           <tr class="info">
+            <td class="col-md-1">Estimated Range: </td>
+            <td class="col-md-1"><p id="range"></p></td>
+            <td class="col-md-1">Miles</td>
+          </tr>    
+          <tr class="info">
+            <td class="col-md-1">Estimated Range: </td>
+            <td class="col-md-1"><p id="rangek"></p></td>
+            <td class="col-md-1">Km</td>
+          </tr>
+        </table>
+      </div>
+       <div class="col-md-3">
+          <table class="table table-hover table-condensed">
+          <tr class="success">
+            <td class="col-md-1">Total Battery Voltage:</td>
+            <td class="col-md-1"><p id="batteryvol"></p></td>
+            <td class="col-md-1">Volts (V)</td>
+          </tr>
+            <tr class="danger">
+            <td class="col-md-1">Total Battery Capacity: </td>
+            <td class="col-md-1"><p id="batterycap"></p></td>
+            <td class="col-md-1">Amp-Hours (Ah)</td>
+          </tr>
+           <tr class="danger">
+            <td class="col-md-1">Total Battery Energy: </td>
+            <td class="col-md-1"><p id="batteryenergy"></p></td>
+            <td class="col-md-1">Watt-Hours (W-hr)</td>
+          </tr>
+          <tr class="success">
+            <td class="col-md-1">Cont. Battery Power:</td>
+            <td class="col-md-1"><p id="contbatterypower"></p></td>
+            <td class="col-md-1">Watts (W)</td>
+          </tr>
+           <tr class="success">
+            <td class="col-md-1">Max Battery Power:</td>
+            <td class="col-md-1"><p id="batterypower"></p></td>
+            <td class="col-md-1">Watts (W)</td>
+          </tr>
+
+           <tr class="warning">
+            <td class="col-md-1">Cont. Discharge </td>
+            <td class="col-md-1"><p id="cd"></p></td>
+            <td class="col-md-1">Amps (A)</td>
+          </tr>
+           <tr class="warning">
+            <td class="col-md-1">Max Discharge </td>
+            <td class="col-md-1"><p id="md"></p></td>
+            <td class="col-md-1">Amps (A)</td>
+          </tr>
+   
+        </table>
+        </div>
+
+        <!-- drive output -->
+           <div class="col-md-2">
+               <table class="table table-striped table-condensed">
+                 </tr>
+      
+            <tr class="danger">
+            <td class="col-md-1 text-center"><p id="erpm"></p></td>
+            <td class="col-md-1"> Max Erpm</td>
+          </tr>
+           <tr class="danger">
+            <td class="col-md-1 text-center"><p id="erpmload"></p></td>
+            <td class="col-md-1"> Loaded Erpm </td>
+          </tr>
+          <tr class="success">
+            <td class="col-md-1 text-center"><p id="motorrpm"></p></td>
+            <td class="col-md-1"> Max Motor rpm</td>
+          </tr>
+          <tr class="success">
+            <td class="col-md-1 text-center"><p id="motorrpmload"></p></td>
+            <td class="col-md-1"> Loaded Motor rpm </td>
+          </tr>
+         <tr class="info">
+            <td class="col-md-1 text-center"><p id="mwheelrpm"></p></td>
+            <td class="col-md-1"> Max Wheel rpm </td>
+        </tr>
+         <tr class="info">
+            <td class="col-md-1 text-center"><p id="wheelrpm"></p></td>
+            <td class="col-md-1"> Loaded Wheel rpm </td>
+        </tr>
+        </table>
+
+           </div>
+
+          </div> <!-- /row -->
+        
+      </div>
+    
+   
+
+
+    </div> <!-- /container -->
+ <body onload="calc()">
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+
+
+
+  </body>
+</html>
