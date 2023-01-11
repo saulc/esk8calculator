@@ -1,0 +1,103 @@
+body {
+	font-family:  Georgia, serif;
+	color: #aaa;
+	background-color: #000;
+	min-height: 1200px;
+	padding: 0px;
+	padding-top: 7em;
+}
+
+.nav{
+	position: fixed;
+	top: 0em;
+	left: 0;
+	width: 100%;
+	padding: 1em 5em 0px 5em;
+	color: #777;
+	background-color: #000;
+}
+
+/* header */
+.topbar{
+	text-align: center;
+	font: bold 46px Georgia, serif;
+}
+
+/* Title bars */
+.hd{	color: #ccc;
+	font: bold 24px Georgia, serif;
+		padding: 0px 15px 0px 15px;
+}
+
+/* main item name */
+.mn{	color: #ccc;
+	font: bold 18px Georgia, serif;
+	padding: 0px 15px 0px 15px;
+}
+
+/* item price text */
+.pr{	color: #ccc;
+	font: italic 16px Georgia, serif;
+	padding: 0px 0px 0px 11px;
+}
+
+/* table row indent */
+.tr{
+	padding: 0px 0px 0px 15px;
+	background-color: #333;
+	border-style: hidden;
+}
+
+/* item description indent */
+.des{	color: #aaa;
+	padding: 0px 15px 0px 25px;
+}
+
+/* reduce colum spacing */
+.pri, .td, .col-md-4, .col-md-5, .col-md-7{
+	padding: 0px 5px 0px 5px;
+	margin: 0px;
+}
+
+/* drink item name text */
+.dr{
+	font: 16px Georgia, serif;
+	padding: 0px;
+	color: #ccc;
+}
+
+/* footer */
+.contact{
+	padding: 1em ;
+	margin: 0em 0em 3em 0em;
+	background-color: #111;
+	color: #fff;
+	text-align: center;
+	font: normal 16px Georgia, serif;
+}
+
+.btn{
+	width: 100%;
+	margin:  0em;
+}
+
+/* buttons unused */
+.btn-dark{
+	background-color: #000;
+}
+
+.btn-light{
+	background-color: #aaa;
+}
+
+.btn-primary{
+	background-color: #333;
+}
+
+.btn-success{
+	background-color: #cc0;
+	font: #000;
+}
+.btn-info{
+	background-color: #f0f;
+}
