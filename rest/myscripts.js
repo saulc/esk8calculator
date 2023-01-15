@@ -2,29 +2,44 @@
 function contact() {
 		var a = document.getElementById("con").innerHTML;
 		if(a == ""){
-	var c = "MENU 21 <br> 213 314 1592<br> Los Angeles, Ca 90039" +
-	"<br> catering@LAmenu21.com<br>Lamenu21.com"
-	document.getElementById("con").innerHTML = c;
-}else
-	document.getElementById("con").innerHTML = "";
+			var c = "MENU 21 <br> 213 314 1592<br> Los Angeles, Ca 90039" +
+			"<br> catering@LAmenu21.com<br>Lamenu21.com"
+			document.getElementById("con").innerHTML = c;
+		}else
+			document.getElementById("con").innerHTML = "";
+		}
+//format price with/out sales tax 9.5%
+function getPrice(p, tx){
+	var s = "$";
+	if(tx) s+= p.toFixed(0);
+	else s += (p*.905).toFixed(2);
+	return s;
 }
 
 function calc() {
 
 	//drinks
+
+	var wtx = document.getElementById("tx").checked;
+	var tt = wtx ? "Prices Include 9.5% Sales Tax. " : "+ 9.5% Sales Tax. "
+		document.getElementById("tax").innerHTML = tt;
 	var d1 = 3;
 	var d2 = 5;
-	document.getElementById("d1").innerHTML = "$"+d1.toFixed(0);
-	document.getElementById("d2").innerHTML = "$"+d2.toFixed(0);
+	document.getElementById("d1").innerHTML = getPrice(d1, wtx);
+	document.getElementById("d2").innerHTML = getPrice(d1, wtx);
 //plates
-		var p = [21, 19, 19, 17, 17, 17, 19 ];
+		var p = [24, 19, 19, 17, 17, 17, 19 ];
 		const pl = [ "Seared Ahi Tuna with Rice",
 									"Swordfish Filet with SweetPotato Fries",
 									"Seared Salmon with Rice",
 									"Grilled Chicken with Rice",
 									"bbq Chicken drumsticks with Fries",
-									"Roasted Pork with Rice"];
-	const pd = [	"Fresh Ahi seared and sliced served over rice. "
+									"Roasted Pork with Rice"
+								];
+
+
+	const pd = [
+			"Fresh Ahi seared and sliced served over rice. "
 			,"Seared Swordfish with grilled squash and rice"
 			,"Crispy pan seared Salmon filet with white or brown rice."
 			,"Marinated chicken breast with White or Brown Rice"
@@ -34,7 +49,7 @@ function calc() {
 
 		for (let i = 0; i < p.length; i++) {
 				document.getElementById( "item"+ (i+1) ).innerHTML = pl[i];
-				document.getElementById("item"+ (i+1)+"price" ).innerHTML = "$"+p[i].toFixed(0);
+				document.getElementById("item"+ (i+1)+"price" ).innerHTML = getPrice(p[i], wtx);
 				document.getElementById("item"+ (i+1)+"des" ).innerHTML = pd[i];
 				}
 
@@ -64,24 +79,24 @@ function calc() {
 
 		for (let i = 0; i < sn.length; i++) {
 				document.getElementById( "s"+ (i+1) ).innerHTML = san[i];
-				document.getElementById("sp"+ (i+1) ).innerHTML = "$"+sn[i].toFixed(0);
+				document.getElementById("sp"+ (i+1) ).innerHTML = getPrice(sn[i], wtx);
 				document.getElementById("sd"+ (i+1) ).innerHTML = sd[i];
 				}
 
 		//snacks
 		var c = [ 7, 7, 7, 5, 5, 6, 5];
 		var cn = [
+			"Salmon Bites",
 			"Spicy Fried Chicken Bites",
 			 "Spicy Pork Sliders",
-			 "Salmon Bites",
-			 "Spring Roll",
-			 "KimBap",
+			 "Spring Rolls",
+			 "SeaWeed Rolls",
 			 "House Salad",
 			 "Fries"
 		]
-		for (let i = 0; i < sn.length; i++) {
+		for (let i = 0; i < cn.length; i++) {
 				document.getElementById( "c"+ (i+1) ).innerHTML = cn[i];
-				document.getElementById("cp"+ (i+1) ).innerHTML = "$"+c[i].toFixed(0);
+				document.getElementById("cp"+ (i+1) ).innerHTML = getPrice(c[i], wtx);
 				}
 
 		//veggie
@@ -89,9 +104,9 @@ function calc() {
 		const v = [ "Sauted Vegetables and Mixed KimChi","Sauted Vegetables"];
 		const vd = ["Mushrooms, squash, peppers, onoins, artichokes; Spinach, cucumber, sprouts, garlic with light Spicy korean sauce",
 		"Mushrooms, squash, peppers, onoins, artichokes "]
-		for (let i = 0; i < sn.length; i++) {
+		for (let i = 0; i < vp.length; i++) {
 				document.getElementById( "v" + (i+1) ).innerHTML = v[i];
-				document.getElementById("vp"+ (i+1) ).innerHTML = "$"+vp[i].toFixed(0);
+				document.getElementById("vp"+ (i+1) ).innerHTML = getPrice(vp[i], wtx);
 				document.getElementById("vd"+ (i+1) ).innerHTML = vd[i];
 				}
 

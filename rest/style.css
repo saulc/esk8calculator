@@ -76,6 +76,11 @@ body {
 	font: normal 16px Georgia, serif;
 }
 
+.tx{
+	padding: 1em;
+	margin:  1em;
+}
+
 .btn{
 	width: 100%;
 	margin:  0em;
