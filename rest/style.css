@@ -33,6 +33,7 @@ body {
 .mn{	color: #ccc;
 	font: bold 18px Georgia, serif;
 	padding: 0px 15px 0px 15px;
+	    margin-bottom: 0rem;
 }
 
 /* item price text */
@@ -50,7 +51,8 @@ body {
 
 /* item description indent */
 .des{	color: #aaa;
-	padding: 0px 15px 0px 25px;
+	padding: .5em 15px 0px 25px;
+	    margin-bottom: 0rem;
 }
 
 /* reduce colum spacing */

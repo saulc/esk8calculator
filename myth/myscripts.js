@@ -170,11 +170,11 @@ var pe4 = document.getElementById("pe4").value;
 	document.getElementById( "t3").innerHTML = "Weekly SellOut: "
 	document.getElementById( "tt3").innerHTML = cvtC(7*(  pe4*16*l4/p4 + pe3*16*l3/p3 + pe2*16*l2/p2 + pe1*16*l1/p1));
 	document.getElementById( "t4").innerHTML = "Monthly SellOut: "
-	document.getElementById( "tt4").innerHTML = cvtC(4*7*(  pe4*16*l4/p4 + pe3*16*l3/p3 + pe2*16*l2/p2 + pe1*16*l1/p1));
+	document.getElementById( "tt4").innerHTML = cvtC(52/12*7*(  pe4*16*l4/p4 + pe3*16*l3/p3 + pe2*16*l2/p2 + pe1*16*l1/p1));
 	document.getElementById( "t5").innerHTML = "Total Portions: "
-	document.getElementById( "tt5").innerHTML = totalportions;
+	document.getElementById( "tt5").innerHTML = totalportions.toFixed(2);
 	document.getElementById( "t6").innerHTML = "Avg Portions/hour: "
-	document.getElementById( "tt6").innerHTML = (16*l4/p4 + 16*l3/p3 + 16*l2/p2 + 16*l1/p1)/hoursaday;
+	document.getElementById( "tt6").innerHTML = ((16*l4/p4 + 16*l3/p3 + 16*l2/p2 + 16*l1/p1)/hoursaday).toFixed(2);
 	document.getElementById( "t7").innerHTML = "Avg mins/plate: "
 	document.getElementById( "tt7").innerHTML = (60/((16*l4/p4 + 16*l3/p3 + 16*l2/p2 + 16*l1/p1)/hoursaday)).toFixed(2);
 
@@ -192,13 +192,28 @@ var pe4 = document.getElementById("pe4").value;
 	document.getElementById( "tt8").innerHTML = cvtC( bulk );
 	document.getElementById( "t9").innerHTML = "Total Daily Spend: "
 	document.getElementById( "tt9").innerHTML = cvtC( td );
-	document.getElementById( "t10").innerHTML = "Net Overhead: "
+	document.getElementById( "t10").innerHTML = "Net Overhead Daily: "
 	document.getElementById( "tt10").innerHTML = cvtC( netover );
-	document.getElementById( "t11").innerHTML = "Sellout Profit: "
-	document.getElementById( "tt11").innerHTML = cvtC( profit);
-	document.getElementById( "t12").innerHTML = "breakeven % : "
-	document.getElementById( "tt12").innerHTML = evenpercent.toFixed(2)+"% ";
-	document.getElementById( "t13").innerHTML = "Portions : "
-	document.getElementById( "tt13").innerHTML = (evenpercent/100*totalportions).toFixed(2) ;
+	document.getElementById( "t11").innerHTML = "Net Overhead Weekly: "
+	document.getElementById( "tt11").innerHTML = cvtC( netover*7 );
+	document.getElementById( "t12").innerHTML = "Net Overhead Monthy: "
+	document.getElementById( "tt12").innerHTML = cvtC( netover*7*52/12 );
+	document.getElementById( "t13").innerHTML = "Net Overhead Year: "
+	document.getElementById( "tt13").innerHTML = cvtC( netover*7*52 );
+	document.getElementById( "t14").innerHTML = "Sellout Profit: "
+	document.getElementById( "tt14").innerHTML = cvtC( profit);
+	document.getElementById( "t15").innerHTML = "breakeven % : "
+	document.getElementById( "tt15").innerHTML = evenpercent.toFixed(2)+"% ";
+	document.getElementById( "t16").innerHTML = "Portions : "
+	document.getElementById( "tt16").innerHTML = (evenpercent/100*totalportions).toFixed(2) ;
+
+	document.getElementById( "t17").innerHTML = "Breakeven projection: "
+	document.getElementById( "tt17").innerHTML = cvtC(360*(evenpercent/100)*sellout);
+
+	document.getElementById( "t18").innerHTML = "Profit ceiling: "
+	document.getElementById( "tt18").innerHTML = cvtC( 360*profit);
+	document.getElementById( "t19").innerHTML = "Net Revenue: "
+	document.getElementById( "tt19").innerHTML = cvtC( 360*profit+ netover*7*52);
+
 
 }

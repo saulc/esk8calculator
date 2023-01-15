@@ -33,13 +33,16 @@ body {
 .mn{	color: #ccc;
 	font: bold 14px Georgia, serif;
 	padding: 0px 15px 0px 15px;
+	    margin-bottom: 0rem;
 }
 
 /* item price text */
 .pr{	color: #ccc;
 	font: italic 14px Georgia, serif;
 	padding: 0px 0px 0px 11px;
+	    margin-bottom: 0rem;
 }
+ 
 
 /* table row indent */
 .tr{
