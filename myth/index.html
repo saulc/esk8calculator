@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>MythMath</title>
+    <!-- bootstrap theme -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="myscripts.js"></script>
+    <body onload="calc()">
+
+</head>
+
+<body>
+  <!-- Main component for a primary marketing message or call to action -->
+  <div class="nav">
+    <div class="col text-center topbar">
+      <h1>Acme Math</h1></div>
+  </div> <!-- end jumbotron -->
+
+<div id="main" class="container">
+  <div class="row" >
+    <div class="col-md-3">
+    <table class="table table-hover table-borderless">
+    <th class="col hd text-center" colspan="2">Payroll: </th>
+    <tbody>
+      <tr ><td class="contact" colspan="2">
+      <div class="input-group">
+      <div class="input-group-addon col-md-8">Hourly $: </div>
+      <input type="text" class="form-control col-md-4" id="hrt" value="17" onblur="calc()">
+      </div></td></tr>
+      <tr ><td class="contact" colspan="2">
+      <div class="input-group">
+      <div class="input-group-addon col-md-8">Hours/week: </div>
+      <input type="text" class="form-control col-md-4" id="hours" value="36" onblur="calc()">
+      </div></td></tr>
+
+
+      <tr >
+      <td class="col-md-7"><p id="c1" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp1" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="c2" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp2" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md7"><p id="c3" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp3" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="c4" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp4" class="pr"></p></td>
+      </tr>
+      <tr ><td class=" contact" colspan="2">
+      <div class="input-group">
+      <div class="input-group-addon col-md-8">Shift Length: </div>
+      <input type="text" class="form-control col-md-4" id="shiftlen" value="8" onblur="calc()">
+      </div></td></tr>
+      <tr ><td class="contact" colspan="2">
+      <div class="input-group">
+      <div class="input-group-addon col-md-8">workers/shift: </div>
+      <input type="text" class="form-control col-md-4" id="xw" value="4" onblur="calc()">
+      </div></td></tr>
+      <tr ><td class="contact" colspan="2">
+      <div class="input-group">
+      <div class="input-group-addon col-md-8">Hours Open: </div>
+      <input type="text" class="form-control col-md-4" id="hoursaday" value="10" onblur="calc()">
+      </div></td></tr>
+      <tr >
+      <td class="col-md-7"><p id="c5" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp5" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="c6" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp6" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="c7" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp7" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="c8" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp8" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="c9" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp9" class="pr"></p></td>
+      </tr>
+      <th class="col hd text-center" colspan="2">Payroll: </th>
+      <tr >
+      <td class="col-md-7"><p id="c10" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp10" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="c11" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp11" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="c12" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp12" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="c13" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp13" class="pr"></p></td>
+      </tr>
+      </tbody>
+      </table>
+
+  </div>
+        <!-- overhead -->
+      <div class="col-md-3">
+      <table class="table table-hover  table-borderless">
+      <tr >
+      <td class="col-md-3 hd text-center" colspan="2">Location: </td>
+      </tr>
+      <tbody>
+        <tr ><td class="contact" colspan="2">
+          <div class="input-group">
+          <div class="input-group-addon col-md-8">Square Feet: </div>
+          <input type="text" class="form-control col-md-4" id="sq" value="1800" onblur="calc()">
+          </div></td></tr>
+          <tr ><td class="contact" colspan="2">
+          <div class="input-group">
+          <div class="input-group-addon col-md-8">Monthly Rate per: </div>
+          <input type="text" class="form-control col-md-4" id="monthlyrentper" value="3.5" onblur="calc()">
+          </div></td></tr>
+          <tr ><td class="contact" colspan="2">
+          <div class="input-group">
+          <div class="input-group-addon col-md-8">nn+: (ex $ idk?) </div>
+          <input type="text" class="form-control col-md-4" id="nn" value="1.2" onblur="calc()">
+          </div></td></tr>
+      <tr >
+      <td class="col-md-7"><p id="item1" class="mn"></p>
+      <p id="1des" class="des"></p></td>
+      <td class="col-md-1"><br><p id="cc1" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="item2" class="mn"></p>
+      <p id="2des" class="des"></p></td>
+      <td class="col-md-1"><p id="cc2" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="item3" class="mn"></p>
+      <p id="3des" class="des"></p></td></td>
+      <td class="col-md-1"><p id="cc3" class="pr"></p>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="item4" class="mn"></p>
+      <p id="4des" class="des"></p></td>
+      <td class="col-md-1"><p id="cc4" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="item5" class="mn"></p>
+      <p id="5des" class="des"></p></td>
+      <td class="col-md-1"><p id="cc5" class="pr"></p></td>
+      </tr>
+      <th class="col hd text-center" colspan="2">Overhead: </th>
+
+      <tr >
+      <td class="col-md-7"><p id="item6" class="mn"></p>
+      <p id="6des" class="des"></p></td>
+      <td class="col-md-1"><p id="cc6" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="item7" class="mn"></p>
+      <p id="7des" class="des"></p></td></td>
+      <td class="col-md-1"><p id="cc7" class="pr"></p>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="item8" class="mn"></p>
+      <p id="8des" class="des"></p></td></td>
+      <td class="col-md-1"><p id="cc8" class="pr"></p>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="item9" class="mn"></p>
+      <p id="9des" class="des"></p></td></td>
+      <td class="col-md-1"><p id="cc9" class="pr"></p>
+      </tr>
+      <tr ><td class="contact" colspan="2">
+      <div class="input-group col-md-12">
+      <div class="input-group-addon col-md-8">Expenses: $ </div>
+      <input type="text" class="form-control col-md-4" id="ae" value="21234" onblur="calc()">
+      </div></td></tr>
+      <tr >
+      <td class="col-md-7"><p id="item10" class="mn"></p>
+      <p id="10des" class="des"></p></td></td>
+      <td class="col-md-1"><p id="cc10" class="pr"></p>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+
+
+   <!-- end of 2 colum -->
+
+   <div class="col-md-3">
+   <table class="table table-hover  table-borderless">
+   <tr >
+   <td class="col-md-3 hd text-center" colspan="2">Food Costs: </td>
+   </tr>
+   <tbody>
+     <tr ><td class="contact" colspan="2">
+     <div class="input-group col-md-12">
+     <div class="input-group-addon col-md-8">Item1 $: </div>
+     <input type="text" class="form-control col-md-4" id="f1" value="5.5" onblur="calc()">
+     </div></td></tr>
+     <tr ><td class="contact" colspan="2">
+     <div class="input-group col-md-12">
+     <div class="input-group-addon col-md-8">Item1 lbs: </div>
+     <input type="text" class="form-control col-md-4" id="lb1" value="40" onblur="calc()">
+     </div></td></tr>
+
+           <tr >
+           <td class="col-md-7"><p id="fa1" class="mn"></p></td>
+           <td class="col-md-1"><p id="fb1" class="pr"></p></td>
+           </tr>
+
+       <tr ><td class="contact" colspan="2">
+       <div class="input-group col-md-12">
+       <div class="input-group-addon col-md-8">Item2 $: </div>
+       <input type="text" class="form-control col-md-4" id="f2" value="4.2" onblur="calc()">
+       </div></td></tr>
+       <tr ><td class="contact" colspan="2">
+       <div class="input-group col-md-12">
+       <div class="input-group-addon col-md-8">Item2 lbs: </div>
+       <input type="text" class="form-control col-md-4" id="lb2" value="40" onblur="calc()">
+       </div></td></tr>
+             <tr >
+             <td class="col-md-7"><p id="fa2" class="mn"></p></td>
+             <td class="col-md-1"><p id="fb2" class="pr"></p></td>
+             </tr>
+     <tr ><td class="contact" colspan="2">
+     <div class="input-group col-md-12">
+     <div class="input-group-addon col-md-8">Item3 $: </div>
+     <input type="text" class="form-control col-md-4" id="f3" value="12.5" onblur="calc()">
+     </div></td></tr>
+     <tr ><td class="contact" colspan="2">
+     <div class="input-group col-md-12">
+     <div class="input-group-addon col-md-8">Item3 lbs: </div>
+     <input type="text" class="form-control col-md-4" id="lb3" value="30" onblur="calc()">
+     </div></td></tr>
+           <tr >
+           <td class="col-md-7"><p id="fa3" class="mn"></p></td>
+           <td class="col-md-1"><p id="fb3" class="pr"></p></td>
+           </tr>
+       <tr ><td class="contact" colspan="2">
+       <div class="input-group col-md-12">
+       <div class="input-group-addon col-md-8">Item4 $: </div>
+       <input type="text" class="form-control col-md-4" id="f4" value="15.5" onblur="calc()">
+       </div></td></tr>
+       <tr ><td class="contact" colspan="2">
+       <div class="input-group col-md-12">
+       <div class="input-group-addon col-md-8">Item4 lbs: </div>
+       <input type="text" class="form-control col-md-4" id="lb4" value="20" onblur="calc()">
+       </div></td></tr>
+
+     <tr >
+     <td class="col-md-7"><p id="fa4" class="mn"></p></td>
+     <td class="col-md-1"><p id="fb4" class="pr"></p></td>
+     </tr>
+     <tr >
+     <td class="col-md-7"><p id="t1" class="mn"></p></td>
+     <td class="col-md-1"><p id="tt1" class="pr"></p></td>
+     </tr>
+     <tr >
+     <td class="col-md-3 hd text-center" colspan="2">Sales: </td>
+     </tr>
+     <tr >
+     <td class="col-md-7"><p id="t2" class="mn"></p></td>
+     <td class="col-md-1"><p id="tt2" class="pr"></p></td>
+     </tr>
+     <tr >
+     <td class="col-md-7"><p id="t3" class="mn"></p></td>
+     <td class="col-md-1"><p id="tt3" class="pr"></p></td>
+     </tr>
+     <tr >
+     <td class="col-md-7"><p id="t4" class="mn"></p></td>
+     <td class="col-md-1"><p id="tt4" class="pr"></p></td>
+     </tr>
+     <tr >
+     <td class="col-md-7"><p id="t5" class="mn"></p></td>
+     <td class="col-md-1"><p id="tt5" class="pr"></p></td>
+     </tr>
+     <tr >
+     <td class="col-md-7"><p id="t6" class="mn"></p></td>
+     <td class="col-md-1"><p id="tt6" class="pr"></p></td>
+     </tr>
+     <tr >
+     <td class="col-md-7"><p id="t7" class="mn"></p></td>
+     <td class="col-md-1"><p id="tt7" class="pr"></p></td>
+     </tr>
+     <tr >
+     <td class="col-md-7"><p id="t8" class="mn"></p></td>
+     <td class="col-md-1"><p id="tt8" class="pr"></p></td>
+     </tr>
+     <tr >
+     <td class="col-md-7"><p id="t9" class="mn"></p></td>
+     <td class="col-md-1"><p id="tt9" class="pr"></p></td>
+   </tr>
+
+   <tr >
+    <td class="col-md-3 hd text-center" colspan="2">Net: </td>
+    </tr>
+      <tr >
+      <td class="col-md-7"><p id="t10" class="mn"></p></td>
+      <td class="col-md-1"><p id="tt10" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="t11" class="mn"></p></td>
+      <td class="col-md-1"><p id="tt11" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="t12" class="mn"></p></td>
+      <td class="col-md-1"><p id="tt12" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="t13" class="mn"></p></td>
+      <td class="col-md-1"><p id="tt13" class="pr"></p></td>
+      </tr>
+   </tbody>
+    </table>
+ </div>
+
+
+     <!-- portions -->
+        <div class="col-md-3">
+        <table class="table table-hover  table-borderless">
+          <tr >
+        <td class="col-md-3 hd text-center" colspan="2">Portions Costs: </td>
+        </tr>
+        <tbody>
+    <tr ><td class="contact" colspan="2">
+    <div class="input-group col-md-12">
+    <div class="input-group-addon col-md-8">Portion 1: oz </div>
+    <input type="text" class="form-control col-md-4" id="p1" value="8" onblur="calc()">
+    </div></td></tr>
+    <tr ><td class="contact" colspan="2">
+    <div class="input-group col-md-12">
+    <div class="input-group-addon col-md-8">Est price 1:  </div>
+    <input type="text" class="form-control col-md-4" id="pe1" value="14" onblur="calc()">
+    </div></td></tr>
+         <tr >
+         <td class="col-md-7"><p id="pa1" class="mn"></p></td>
+         <td class="col-md-4"><p id="pb1" class="pr"></p></td>
+         </tr>
+      <tr >
+      <td class="col-md-7"><p id="pc1" class="mn"></p></td>
+      <td class="col-md-4"><p id="pd1" class="pr"></p></td>
+      </tr>
+   <tr >
+   <td class="col-md-4 contact" colspan="2"><p id="pp1" class="pr"></p></td>
+   </tr>
+
+    <tr ><td class="contact" colspan="2">
+    <div class="input-group col-md-12">
+    <div class="input-group-addon col-md-8">Portion 2: oz </div>
+    <input type="text" class="form-control col-md-4" id="p2" value="10" onblur="calc()">
+    </div></td></tr>
+    <tr ><td class="contact" colspan="2">
+    <div class="input-group col-md-12">
+    <div class="input-group-addon col-md-8">Est price 2:  </div>
+    <input type="text" class="form-control col-md-4" id="pe2" value="15" onblur="calc()">
+    </div></td></tr>
+         <tr >
+         <td class="col-md-7"><p id="pa2" class="mn"></p></td>
+         <td class="col-md-4"><p id="pb2" class="pr"></p></td>
+         </tr>
+         <tr >
+         <td class="col-md-7"><p id="pc2" class="mn"></p></td>
+         <td class="col-md-4"><p id="pd2" class="pr"></p></td>
+         </tr>
+      <tr >
+      <td class="col-md-4 contact" colspan="2"><p id="pp2" class="pr"></p></td>
+      </tr>
+
+    <tr ><td class="contact" colspan="2">
+    <div class="input-group col-md-12">
+    <div class="input-group-addon col-md-8">Portion 3: oz </div>
+    <input type="text" class="form-control col-md-4" id="p3" value="6" onblur="calc()">
+    </div></td></tr>
+    <tr ><td class="contact" colspan="2">
+    <div class="input-group col-md-12">
+    <div class="input-group-addon col-md-8">Est price 3:  </div>
+    <input type="text" class="form-control col-md-4" id="pe3" value="19" onblur="calc()">
+    </div></td></tr>
+         <tr >
+         <td class="col-md-7"><p id="pa3" class="mn"></p></td>
+         <td class="col-md-4"><p id="pb3" class="pr"></p></td>
+         </tr>
+         <tr >
+         <td class="col-md-7"><p id="pc3" class="mn"></p></td>
+         <td class="col-md-4"><p id="pd3" class="pr"></p></td>
+         </tr>
+      <tr >
+      <td class="col-md-4 contact" colspan="2"><p id="pp3" class="pr"></p></td>
+      </tr>
+
+
+
+    <tr ><td class="contact" colspan="2">
+    <div class="input-group col-md-12">
+    <div class="input-group-addon col-md-8">Portion 4: oz </div>
+    <input type="text" class="form-control col-md-4" id="p4" value="5" onblur="calc()">
+    </div></td></tr>
+    <tr ><td class="contact" colspan="2">
+    <div class="input-group col-md-12">
+    <div class="input-group-addon col-md-8">Est price 4:  </div>
+    <input type="text" class="form-control col-md-4" id="pe4" value="21" onblur="calc()">
+    </div></td></tr>
+         <tr >
+         <td class="col-md-7"><p id="pa4" class="mn"></p></td>
+         <td class="col-md-4"><p id="pb4" class="pr"></p></td>
+         </tr>
+         <tr >
+         <td class="col-md-7"><p id="pc4" class="mn"></p></td>
+         <td class="col-md-4"><p id="pd4" class="pr"></p></td>
+         </tr>
+      <tr >
+      <td class="col-md-4 contact" colspan="2"><p id="pp4" class="pr"></p></td>
+      </tr>
+
+      <tr >
+      <td class="col-md-7"><p id="fca" class="mn"></p>
+      <p id="fcavgb" class="des"></p></td></td>
+      <td class="col-md-1"><p id="fcavg" class="pr"></p>
+      </tr>
+
+
+  <tr ><td class="contact" colspan="2">
+  <div class="input-group col-md-12">
+  <div class="input-group-addon col-md-8">Bulk Costs: % </div>
+  <input type="text" class="form-control col-md-4" id="bc" value="11" onblur="calc()">
+  </div></td></tr>
+  <tr ><td class="contact" colspan="2">
+  <div class="input-group col-md-12">
+  <div class="input-group-addon col-md-8">Waste Costs: $ </div>
+  <input type="text" class="form-control col-md-4" id="wc" value="111" onblur="calc()">
+  </div></td></tr>
+   <tr ><td class="contact" colspan="2">
+   <div class="input-group col-md-12">
+   <div class="input-group-addon col-md-8">To go Costs: $ </div>
+   <input type="text" class="form-control col-md-4" id="tgc" value="211" onblur="calc()">
+   </div></td></tr>
+   </tbody>
+   </table>
+   </div>
+
+     </div>
+    <!-- end of 3 colum -->
+
+
+   <div class="row text-center contact">
+       <!-- <div class="col contact"> -->
+      <p id="con"></p>
+      <button onclick="javascript:contact()" method="post" type="submit"
+              class="btn btn-primary btn-block">Contact</button>
+   <!-- </div> -->
+
+         </div>
+            <div class="row text-center contact">
+              <p id="tax"></p>
+<form action="/action_page.php">
+  <input type="checkbox" id="tx" name="tax" checked="true" onclick="calc()">
+  <label for="tax"> Include Sales Tax</label><br>
+</form>
+</div>
+
+
+  </div> <!-- /row -->
+
+</div> <!-- /container -->
+</body>
+</html>
