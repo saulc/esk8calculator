@@ -25,7 +25,7 @@
 
 <div id="main" class="container">
   <div class="row" >
-    <div class="col-md-3">
+    <div class="col-md-2">
     <table class="table table-hover table-borderless">
     <th class="col hd text-center" colspan="2">Payroll: </th>
     <tbody>
@@ -118,11 +118,9 @@
 
   </div>
         <!-- overhead -->
-      <div class="col-md-3">
+      <div class="col-md-2">
       <table class="table table-hover  table-borderless">
-      <tr >
-      <td class="col-md-3 hd text-center" colspan="2">Location: </td>
-      </tr>
+      <th class="col hd text-center" colspan="2">Location: </th>
       <tbody>
         <tr ><td class="contact" colspan="2">
           <div class="input-group">
@@ -208,16 +206,13 @@
 
    <!-- end of 2 colum -->
 
-   <div class="col-md-3">
+   <div class="col-md-2">
    <table class="table table-hover  table-borderless">
-     <td class="col-md-3 hd text-center" colspan="2">Sales: </td>
-     </tr>
-     <tr >
+   <th class="col hd text-center" colspan="2">Sales: </th>
      <tbody>
      <td class="col-md-7"><p id="t1" class="mn"></p></td>
      <td class="col-md-1"><p id="tt1" class="pr"></p></td>
      </tr>
-     <tr >
      <tr >
      <td class="col-md-7"><p id="t2" class="mn"></p></td>
      <td class="col-md-1"><p id="tt2" class="pr"></p></td>
@@ -289,10 +284,14 @@
     <td class="col-md-7"><p id="e5" class="mn"></p></td>
     <td class="col-md-1"><p id="ee5" class="pr"></p></td>
     </tr>
+  </div>
+  </tbody></table></div>
 
-   <tr >
-    <td class="col-md-3 hd text-center" colspan="2">Net: </td>
-    </tr>
+      <!-- <div class="row" > -->
+       <div class="col-md-2">
+       <table class="table table-hover  table-borderless">
+         <td class="col-md-3 hd text-center" colspan="2">Net: </td>
+      <tbody>
     <tr >
     <td class="col-md-7"><p id="e6" class="mn"></p></td>
     <td class="col-md-1"><p id="ee6" class="pr"></p></td>
@@ -345,6 +344,11 @@
       <td class="col-md-7"><p id="t19" class="mn"></p></td>
       <td class="col-md-1"><p id="tt19" class="pr"></p></td>
       </tr>
+
+    <tr >
+    <td class="col-md-3 hd text-center" colspan="2">Efficiency: </td>
+    </tr>
+
         <tr ><td class="contact" colspan="2">
         <div class="input-group col-md-12">
         <div class="input-group-addon col-md-8">Sellout Rate %: </div>
@@ -382,17 +386,19 @@
         <td class="col-md-7"><p id="s8" class="mn"></p></td>
         <td class="col-md-1"><p id="ss8" class="pr"></p></td>
         </tr>
+        <tr >
+        <td class="col-md-7"><p id="s9" class="mn"></p></td>
+        <td class="col-md-1"><p id="ss9" class="pr"></p></td>
+        </tr>
  </tbody>
  </table>
  </div>
 
 
      <!-- portions -->
-        <div class="col-md-3">
+        <div class="col-md-2">
         <table class="table table-hover  table-borderless">
-        <tr >
-        <td class="col-md-3 hd text-center" colspan="2">Food Costs: </td>
-        </tr>
+        <th class="col-md-3 hd text-center" colspan="2">Food Costs: </th>
         <tbody>
           <tr ><td class="contact" colspan="2">
           <div class="input-group col-md-12">
@@ -402,13 +408,34 @@
           <tr ><td class="contact" colspan="2">
           <div class="input-group col-md-12">
           <div class="input-group-addon col-md-8">Item1 lbs: </div>
-          <input type="text" class="form-control col-md-4" id="lb1" value="40" onblur="calc()">
+          <input type="text" class="form-control col-md-4" id="lb1" value="20" onblur="calc()">
           </div></td></tr>
 
                 <tr >
                 <td class="col-md-7"><p id="fa1" class="mn"></p></td>
                 <td class="col-md-1"><p id="fb1" class="pr"></p></td>
                 </tr>
+          <tr ><td class="contact" colspan="2">
+          <div class="input-group col-md-12">
+          <div class="input-group-addon col-md-8">Portion 1: oz </div>
+          <input type="text" class="form-control col-md-4" id="p1" value="8" onblur="calc()">
+          </div></td></tr>
+          <tr ><td class="contact" colspan="2">
+          <div class="input-group col-md-12">
+          <div class="input-group-addon col-md-8">Est price 1:  </div>
+          <input type="text" class="form-control col-md-4" id="pe1" value="20" onblur="calc()">
+          </div></td></tr>
+          <tr >
+          <td class="col-md-7"><p id="pa1" class="mn"></p></td>
+          <td class="col-md-4"><p id="pb1" class="pr"></p></td>
+          </tr>
+          <tr >
+          <td class="col-md-7"><p id="pc1" class="mn"></p></td>
+          <td class="col-md-4"><p id="pd1" class="pr"></p></td>
+          </tr>
+          <tr >
+          <td class="col-md-4 contact" colspan="2"><p id="pp1" class="pr"></p></td>
+          </tr>
 
             <tr ><td class="contact" colspan="2">
             <div class="input-group col-md-12">
@@ -424,6 +451,36 @@
                   <td class="col-md-7"><p id="fa2" class="mn"></p></td>
                   <td class="col-md-1"><p id="fb2" class="pr"></p></td>
                   </tr>
+
+          <tr ><td class="contact" colspan="2">
+          <div class="input-group col-md-12">
+          <div class="input-group-addon col-md-8">Portion 2: oz </div>
+          <input type="text" class="form-control col-md-4" id="p2" value="10" onblur="calc()">
+          </div></td></tr>
+          <tr ><td class="contact" colspan="2">
+          <div class="input-group col-md-12">
+          <div class="input-group-addon col-md-8">Est price 2:  </div>
+          <input type="text" class="form-control col-md-4" id="pe2" value="18" onblur="calc()">
+          </div></td></tr>
+          <tr >
+          <td class="col-md-7"><p id="pa2" class="mn"></p></td>
+          <td class="col-md-4"><p id="pb2" class="pr"></p></td>
+          </tr>
+          <tr >
+          <td class="col-md-7"><p id="pc2" class="mn"></p></td>
+          <td class="col-md-4"><p id="pd2" class="pr"></p></td>
+          </tr>
+          <tr >
+          <td class="col-md-4 contact" colspan="2"><p id="pp2" class="pr"></p></td>
+          </tr>
+
+          </tbody></table></div>
+
+             <div class="col-md-2">
+             <table class="table table-hover  table-borderless">
+               <th class="col-md-3 hd text-center" colspan="2">Food Cont. </th>
+            <tbody>
+
           <tr ><td class="contact" colspan="2">
           <div class="input-group col-md-12">
           <div class="input-group-addon col-md-8">Item3 $: </div>
@@ -432,121 +489,72 @@
           <tr ><td class="contact" colspan="2">
           <div class="input-group col-md-12">
           <div class="input-group-addon col-md-8">Item3 lbs: </div>
-          <input type="text" class="form-control col-md-4" id="lb3" value="30" onblur="calc()">
+          <input type="text" class="form-control col-md-4" id="lb3" value="10" onblur="calc()">
           </div></td></tr>
                 <tr >
                 <td class="col-md-7"><p id="fa3" class="mn"></p></td>
                 <td class="col-md-1"><p id="fb3" class="pr"></p></td>
                 </tr>
-            <tr ><td class="contact" colspan="2">
-            <div class="input-group col-md-12">
-            <div class="input-group-addon col-md-8">Item4 $: </div>
-            <input type="text" class="form-control col-md-4" id="f4" value="15.5" onblur="calc()">
-            </div></td></tr>
-            <tr ><td class="contact" colspan="2">
-            <div class="input-group col-md-12">
-            <div class="input-group-addon col-md-8">Item4 lbs: </div>
-            <input type="text" class="form-control col-md-4" id="lb4" value="20" onblur="calc()">
-            </div></td></tr>
-
-          <tr >
-          <td class="col-md-7"><p id="fa4" class="mn"></p></td>
-          <td class="col-md-1"><p id="fb4" class="pr"></p></td>
-          </tr>
-
-          <tr >
-        <td class="col-md-3 hd text-center" colspan="2">Portions Costs: </td>
+        <tr ><td class="contact" colspan="2">
+        <div class="input-group col-md-12">
+        <div class="input-group-addon col-md-8">Portion 3: oz </div>
+        <input type="text" class="form-control col-md-4" id="p3" value="6" onblur="calc()">
+        </div></td></tr>
+        <tr ><td class="contact" colspan="2">
+        <div class="input-group col-md-12">
+        <div class="input-group-addon col-md-8">Est price 3:  </div>
+        <input type="text" class="form-control col-md-4" id="pe3" value="19" onblur="calc()">
+        </div></td></tr>
+        <tr >
+        <td class="col-md-7"><p id="pa3" class="mn"></p></td>
+        <td class="col-md-4"><p id="pb3" class="pr"></p></td>
         </tr>
-        <tbody>
-    <tr ><td class="contact" colspan="2">
-    <div class="input-group col-md-12">
-    <div class="input-group-addon col-md-8">Portion 1: oz </div>
-    <input type="text" class="form-control col-md-4" id="p1" value="8" onblur="calc()">
-    </div></td></tr>
-    <tr ><td class="contact" colspan="2">
-    <div class="input-group col-md-12">
-    <div class="input-group-addon col-md-8">Est price 1:  </div>
-    <input type="text" class="form-control col-md-4" id="pe1" value="14" onblur="calc()">
-    </div></td></tr>
-         <tr >
-         <td class="col-md-7"><p id="pa1" class="mn"></p></td>
-         <td class="col-md-4"><p id="pb1" class="pr"></p></td>
-         </tr>
-      <tr >
-      <td class="col-md-7"><p id="pc1" class="mn"></p></td>
-      <td class="col-md-4"><p id="pd1" class="pr"></p></td>
-      </tr>
-   <tr >
-   <td class="col-md-4 contact" colspan="2"><p id="pp1" class="pr"></p></td>
-   </tr>
-
-    <tr ><td class="contact" colspan="2">
-    <div class="input-group col-md-12">
-    <div class="input-group-addon col-md-8">Portion 2: oz </div>
-    <input type="text" class="form-control col-md-4" id="p2" value="10" onblur="calc()">
-    </div></td></tr>
-    <tr ><td class="contact" colspan="2">
-    <div class="input-group col-md-12">
-    <div class="input-group-addon col-md-8">Est price 2:  </div>
-    <input type="text" class="form-control col-md-4" id="pe2" value="15" onblur="calc()">
-    </div></td></tr>
-         <tr >
-         <td class="col-md-7"><p id="pa2" class="mn"></p></td>
-         <td class="col-md-4"><p id="pb2" class="pr"></p></td>
-         </tr>
-         <tr >
-         <td class="col-md-7"><p id="pc2" class="mn"></p></td>
-         <td class="col-md-4"><p id="pd2" class="pr"></p></td>
-         </tr>
-      <tr >
-      <td class="col-md-4 contact" colspan="2"><p id="pp2" class="pr"></p></td>
-      </tr>
-
-    <tr ><td class="contact" colspan="2">
-    <div class="input-group col-md-12">
-    <div class="input-group-addon col-md-8">Portion 3: oz </div>
-    <input type="text" class="form-control col-md-4" id="p3" value="6" onblur="calc()">
-    </div></td></tr>
-    <tr ><td class="contact" colspan="2">
-    <div class="input-group col-md-12">
-    <div class="input-group-addon col-md-8">Est price 3:  </div>
-    <input type="text" class="form-control col-md-4" id="pe3" value="19" onblur="calc()">
-    </div></td></tr>
-         <tr >
-         <td class="col-md-7"><p id="pa3" class="mn"></p></td>
-         <td class="col-md-4"><p id="pb3" class="pr"></p></td>
-         </tr>
-         <tr >
-         <td class="col-md-7"><p id="pc3" class="mn"></p></td>
-         <td class="col-md-4"><p id="pd3" class="pr"></p></td>
-         </tr>
-      <tr >
-      <td class="col-md-4 contact" colspan="2"><p id="pp3" class="pr"></p></td>
-      </tr>
+        <tr >
+        <td class="col-md-7"><p id="pc3" class="mn"></p></td>
+        <td class="col-md-4"><p id="pd3" class="pr"></p></td>
+        </tr>
+        <tr >
+        <td class="col-md-4 contact" colspan="2"><p id="pp3" class="pr"></p></td>
+        </tr>
 
 
+        <tr ><td class="contact" colspan="2">
+        <div class="input-group col-md-12">
+        <div class="input-group-addon col-md-8">Item4 $: </div>
+        <input type="text" class="form-control col-md-4" id="f4" value="15.5" onblur="calc()">
+        </div></td></tr>
+        <tr ><td class="contact" colspan="2">
+        <div class="input-group col-md-12">
+        <div class="input-group-addon col-md-8">Item4 lbs: </div>
+        <input type="text" class="form-control col-md-4" id="lb4" value="10" onblur="calc()">
+        </div></td></tr>
 
-    <tr ><td class="contact" colspan="2">
-    <div class="input-group col-md-12">
-    <div class="input-group-addon col-md-8">Portion 4: oz </div>
-    <input type="text" class="form-control col-md-4" id="p4" value="5" onblur="calc()">
-    </div></td></tr>
-    <tr ><td class="contact" colspan="2">
-    <div class="input-group col-md-12">
-    <div class="input-group-addon col-md-8">Est price 4:  </div>
-    <input type="text" class="form-control col-md-4" id="pe4" value="21" onblur="calc()">
-    </div></td></tr>
-         <tr >
-         <td class="col-md-7"><p id="pa4" class="mn"></p></td>
-         <td class="col-md-4"><p id="pb4" class="pr"></p></td>
-         </tr>
-         <tr >
-         <td class="col-md-7"><p id="pc4" class="mn"></p></td>
-         <td class="col-md-4"><p id="pd4" class="pr"></p></td>
-         </tr>
-      <tr >
-      <td class="col-md-4 contact" colspan="2"><p id="pp4" class="pr"></p></td>
-      </tr>
+        <tr >
+        <td class="col-md-7"><p id="fa4" class="mn"></p></td>
+        <td class="col-md-1"><p id="fb4" class="pr"></p></td>
+        </tr>
+
+        <tr ><td class="contact" colspan="2">
+        <div class="input-group col-md-12">
+        <div class="input-group-addon col-md-8">Portion 4: oz </div>
+        <input type="text" class="form-control col-md-4" id="p4" value="5" onblur="calc()">
+        </div></td></tr>
+        <tr ><td class="contact" colspan="2">
+        <div class="input-group col-md-12">
+        <div class="input-group-addon col-md-8">Est price 4:  </div>
+        <input type="text" class="form-control col-md-4" id="pe4" value="24" onblur="calc()">
+        </div></td></tr>
+        <tr >
+        <td class="col-md-7"><p id="pa4" class="mn"></p></td>
+        <td class="col-md-4"><p id="pb4" class="pr"></p></td>
+        </tr>
+        <tr >
+        <td class="col-md-7"><p id="pc4" class="mn"></p></td>
+        <td class="col-md-4"><p id="pd4" class="pr"></p></td>
+        </tr>
+        <tr >
+        <td class="col-md-4 contact" colspan="2"><p id="pp4" class="pr"></p></td>
+        </tr>
 
       <tr >
       <td class="col-md-7"><p id="fca" class="mn"></p>

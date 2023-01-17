@@ -120,10 +120,10 @@ var p2 = document.getElementById("p2").value;
 var p3 = document.getElementById("p3").value;
 var p4 = document.getElementById("p4").value;
 
-var pe1 = document.getElementById("pe1").value;
-var pe2 = document.getElementById("pe2").value;
-var pe3 = document.getElementById("pe3").value;
-var pe4 = document.getElementById("pe4").value;
+var pe1 = document.getElementById("pe1").value *.905;
+var pe2 = document.getElementById("pe2").value *.905;
+var pe3 = document.getElementById("pe3").value *.905;
+var pe4 = document.getElementById("pe4").value *.905;
 var ds = f4*l4 + f3*l3 + f2*l2 + f1*l1;
 
 	document.getElementById( "fb1").innerHTML = cvtC( f1*l1);
@@ -247,23 +247,26 @@ var ds = f4*l4 + f3*l3 + f2*l2 + f1*l1;
 			var wdrev = selloutrate*sellout;
 			var wdprofit = selloutrate*sellout-netover;
 
-			document.getElementById("s1" ).innerHTML  = "Weighted Rev:"
-			document.getElementById("ss1" ).innerHTML = "Weighted Profit:"
+			document.getElementById("s1" ).innerHTML  = "Weighted Rev:";
+			document.getElementById("ss1" ).innerHTML = "Weighted Profit:";
 			document.getElementById("s2" ).innerHTML  = cvtC(wdrev);
 			document.getElementById("s3" ).innerHTML = cvtC(wdrev*7);
 			document.getElementById("s4" ).innerHTML = cvtC(wdrev*7*52/12);
 			document.getElementById("s5" ).innerHTML = cvtC(wdrev*7*52);
 
-			document.getElementById("ss2" ).innerHTML = cvtC(wdprofit)
+			document.getElementById("ss2" ).innerHTML = cvtC(wdprofit);
 			document.getElementById("ss3" ).innerHTML = cvtC(wdprofit*7);
 			document.getElementById("ss4" ).innerHTML = cvtC(wdprofit*7*52/12);
 			document.getElementById("ss5" ).innerHTML = cvtC(wdprofit*7*52);
 
-			document.getElementById( "s6").innerHTML = "Weighted Portions: "
-			document.getElementById( "ss6").innerHTML = (selloutrate*totalportions).toFixed(2) +"/" + totalportions.toFixed(2);
-			document.getElementById( "s7").innerHTML = "Avg Portions/hour: "
-			document.getElementById( "ss7").innerHTML = ((selloutrate*totalportions)/hoursaday).toFixed(2);
-			document.getElementById( "s8").innerHTML = "Avg mins/plate: "
-			document.getElementById( "ss8").innerHTML = (60/((selloutrate*totalportions)/hoursaday)).toFixed(2);
+			document.getElementById( "s6").innerHTML = "Effective Margin: ";
+			document.getElementById( "ss6").innerHTML = (100*wdprofit/wdrev).toFixed(2)+"% ";
+
+			document.getElementById( "s7").innerHTML = "Weighted Portions: ";
+			document.getElementById( "ss7").innerHTML = (selloutrate*totalportions).toFixed(2) +"/" + totalportions.toFixed(2);
+			document.getElementById( "s8").innerHTML = "Avg Portions/hour: ";
+			document.getElementById( "ss8").innerHTML = ((selloutrate*totalportions)/hoursaday).toFixed(2);
+			document.getElementById( "s9").innerHTML = "Avg mins/plate: ";
+			document.getElementById( "ss9").innerHTML = (60/((selloutrate*totalportions)/hoursaday)).toFixed(2);
 
 }

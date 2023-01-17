@@ -5,9 +5,11 @@ body {
 	min-height: 1200px;
 	padding: 0px;
 	padding-top: 1em;
- 
-}
 
+}
+.container{
+	max-width: 1720px;
+}
 .nav{
 	position: relative;
 	top: 0em;
