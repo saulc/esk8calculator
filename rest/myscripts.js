@@ -26,7 +26,7 @@ function calc() {
 	var d1 = 3;
 	var d2 = 5;
 	document.getElementById("d1").innerHTML = getPrice(d1, wtx);
-	document.getElementById("d2").innerHTML = getPrice(d1, wtx);
+	document.getElementById("d2").innerHTML = getPrice(d2, wtx);
 //plates
 		var p = [24, 19, 19, 17, 17, 17, 19 ];
 		const pl = [ "Seared Ahi Tuna with Rice",
