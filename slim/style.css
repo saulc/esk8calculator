@@ -24,15 +24,15 @@ body {
 
 /* Title bars */
 .hd{
-	color: #ccc;
-	font: normal 24px Copperplate, Papyrus, fantasy;
+	color: #fff;
+	font: normal 44px Copperplate, Papyrus, fantasy;
 	padding: 0px 15px 0px 15px;
 }
 
 /* main item name */
 .mn{
-	color: #ccc;
-	font: normal 16px Copperplate, Papyrus, fantasy;
+	color: #fff;
+	font: normal 21px Copperplate, Papyrus, fantasy;
 	padding: 0px 15px 0px 15px;
 	margin-bottom: 0rem;
 }
@@ -53,10 +53,10 @@ body {
 
 /* item description indent */
 .des{
-	color: #aaa;
+	color: #fff;
 	padding: .5em 15px 0px 25px;
 	margin-bottom: 0rem;
-	font: italic 14px Copperplate, Papyrus, fantasy;
+	font: italic 16px Copperplate, Papyrus, fantasy;
 }
 
 /* reduce colum spacing */
@@ -70,7 +70,8 @@ body {
 	text-align: center;
 	font: normal 16px Copperplate, Papyrus, fantasy;
 	padding: 0px;
-	color: #ccc;
+	margin: 0px;
+	color: #fff;
 }
 
 .cn{
@@ -78,7 +79,7 @@ body {
 	font: normal 16px Copperplate, Papyrus, fantasy;
 	padding: 0px;
 	margin: 0px;
-	color: #ccc;
+	color: #fff;
 }
 /* footer */
 .footer{
