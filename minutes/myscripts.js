@@ -18,11 +18,11 @@ function cvtC(p){
 function calc() {
 
 	//drinks
-	const daysayear = 364; //7x52
+	var daysayear = 365; //7x52
 
 	var cn = [
 			"days", "weeks", "months", "years",
-			"hours", "minutes", "seconds", "micros", "nano", "pico"
+			"hours", "minutes", "seconds", "micros", "nano", "pico", "...", "..."
 
 	]
 	for (let i = 0; i < cn.length; i++) {
@@ -32,10 +32,11 @@ function calc() {
 
 			// var hours = document.getElementById("hours").value;
 			var minutes = document.getElementById("minutes").value;
-			var seconds = document.getElementById("seconds").value = minutes*60;
-			var hours = document.getElementById("hours").value = minutes /60;
+			// var seconds = document.getElementById("seconds").value = minutes*60;
+			// var hours = document.getElementById("hours").value = minutes /60;
 
-
+var x = Date()
+document.getElementById("cp11" ).innerHTML = x;
 	document.getElementById("cp1" ).innerHTML = cvtC(minutes/60/24);
 	document.getElementById("cp2" ).innerHTML = cvtC(minutes/60/24/7);
 	document.getElementById("cp3" ).innerHTML = cvtC(minutes/60/24/7/4); //monthly
@@ -47,4 +48,27 @@ function calc() {
 	document.getElementById("cp8" ).innerHTML = cvtC(minutes*60*1000);
 	document.getElementById("cp9" ).innerHTML = cvtC(minutes*60*1000000);
 	document.getElementById("cp10" ).innerHTML = cvtC(minutes*60*1000*1000*1000);
+
+
+	var yn = [
+		 "years", "months", "weeks", 	"days", "hours"
+		 , "minutes", "seconds"
+
+	]
+	for (let i = 0; i < yn.length; i++) {
+			document.getElementById( "y"+ (i+1) ).innerHTML = yn[i];
+			// document.getElementById("cp"+ (i+1) ).innerHTML = getPrice(c[i], wtx);
+			}
+
+	var khp = 1.341;
+	var year = document.getElementById("years").value;
+		// document.getElementById("yp1" ).innerHTML =  cvtC(year*khp	);
+
+
+		document.getElementById("yp1" ).innerHTML =  cvtC(year*1	);
+		document.getElementById("yp2" ).innerHTML =  cvtC(year*12	);
+		document.getElementById("yp3" ).innerHTML =  cvtC(year*52	);
+		document.getElementById("yp4" ).innerHTML =  cvtC(year*365	);
+		// document.getElementById("yp5" ).innerHTML =  cvtC(year*365*24	);
+		// document.getElementById("yp6" ).innerHTML =  cvtC(year*365*24*60	);
 }
