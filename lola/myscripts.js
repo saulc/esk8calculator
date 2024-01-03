@@ -63,7 +63,7 @@ document.getElementById("table").innerHTML = show(d);
 		var sn = [23, 33, 26, 31, 31, 24, 25 ];
 		var san = ["Regular", "Classic", "Cali","idk", "21", "Rodeo", "undefined"];
 		var sd = [
-							"1 style"
+							"1 style", "1", "2", "?", "!.,'"
 				]
 
 					var c = [ 7, 7, 7, 6, 5, 5, 5];
