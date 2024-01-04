@@ -3,11 +3,11 @@ body {
 	background-color: #333;
 	min-height: 1200px;
 	padding: 0px;
-	padding-top: 1em;
+	padding-top: 7em;
 }
 
 .nav{
-	position: relative;
+	position: fixed;
 	top: 0em;
 	left: 0;
 	width: 100%;
@@ -23,6 +23,11 @@ body {
 }
 .t2{
 	background-color: #c07;
+	text-align: center;
+	font: bold 46px Copperplate, Papyrus, fantasy;
+}
+.t3{
+	background-color: #077;
 	text-align: center;
 	font: bold 46px Copperplate, Papyrus, fantasy;
 }
