@@ -57,6 +57,7 @@ document.getElementById("table").innerHTML = show(d);
 							'<img src="./res/sk.jpg" alt="SK8" width="88">',
 							 '<img src="./res/b.jpg" alt="SK8" width="88">',
  							 '<img src="./res/sk88.jpg" alt="SK8" width="88">',
+ 							 '<img src="./res/palms.jpg" alt="SK8" width="88">',
 							  "more", "less", "whatever"
 						]
 
