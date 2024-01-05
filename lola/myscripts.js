@@ -66,7 +66,6 @@ document.getElementById("table").innerHTML = show(d);
 		var sd = [
 							"1 style", "1", "2", "?", "!.,'"
 				]
-
 					var c = [ 7, 7, 7, 6, 5, 5, 5];
 					var cn = [
 						 "words", "words", "more words"
@@ -75,8 +74,11 @@ document.getElementById("table").innerHTML = show(d);
 									//app
 				var ap = [121, 143, 100, 111, 51];
 				const a = [ "and a few", "more words", "Go here", "lala"];
-				const ad = [" ",
-								"", ""
+				const ad = [
+						'<img src="./res/sk88.jpg" alt="SK8" width="88">',
+						'<img src="./res/la.jpg" alt="SK8" width="88">',
+						'<img src="./res/bg.jpg" alt="SK8" width="88">',
+						'<img src="./res/mv.jpg" alt="SK8" width="88">',
 									];
 					var vp = [55, 88]
 						const v = [ "Blue", "Pink", "Green", "Orange"];
