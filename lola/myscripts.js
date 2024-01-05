@@ -61,10 +61,13 @@ document.getElementById("table").innerHTML = show(d);
 							  "more", "less", "whatever"
 						]
 
-		var sn = [23, 33, 26, 31, 31, 24, 25 ];
-		var san = ["Regular", "Classic", "Cali","idk", "21", "Rodeo", "undefined"];
+		var sn = [23, 33, 26, 31, 31, 24, 25, 26 ];
+		var san = ["Regular", "Classic", "Cali","idk", "21", "stuff", "thing", "undefined"];
 		var sd = [
-							"1 style", "1", "2", "?", "!.,'"
+					'<img src="./res/lad.jpg" alt="SK8" width="88">',
+					'<img src="./res/lado.jpg" alt="SK8" width="88">',
+					'<img src="./res/vlm.jpg" alt="SK8" width="88">',
+					'<img src="./res/vla.jpg" alt="SK8" width="88">',
 				]
 					var c = [ 7, 7, 7, 6, 5, 5, 5];
 					var cn = [
@@ -75,8 +78,7 @@ document.getElementById("table").innerHTML = show(d);
 				var ap = [121, 143, 100, 111, 51];
 				const a = [ "and a few", "more words", "Go here", "lala"];
 				const ad = [
-						'<img src="./res/sk88.jpg" alt="SK8" width="88">',
-						'<img src="./res/la.jpg" alt="SK8" width="88">',
+						'<img src="./res/sk.jpg" alt="SK8" width="88"> <img src="./res/sk88.jpg" alt="SK8" width="88"> <img src="./res/la.jpg" alt="SK8" width="88">',
 						'<img src="./res/bg.jpg" alt="SK8" width="88">',
 						'<img src="./res/mv.jpg" alt="SK8" width="88">',
 									];
