@@ -50,12 +50,12 @@ document.getElementById("table").innerHTML = show(d);
 //
 // }
 
-		const pl = [ "one", "two", "three", "four" , "five", "six", "seven"
+		const pl = [ "one", "$toned", "three", "four" , "five", "six", "seven"
 						];
 			var p = [66, 88, 99, 101, 33, 77, 44 ];
 			const pd = [
 							'<img src="./res/sk.jpg" alt="SK8" width="88">',
-							 '<img src="./res/b.jpg" alt="SK8" width="88">',
+							 '<img src="./res/cl.jpg" alt="SK8" width="88">',
  							 '<img src="./res/sk88.jpg" alt="SK8" width="88">',
  							 '<img src="./res/palms.jpg" alt="SK8" width="88">',
 							  "more", "less", "whatever"
