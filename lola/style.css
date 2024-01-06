@@ -1,6 +1,6 @@
 body {
-	color: #aaa;
-	background-color: #333;
+	color: #222;
+	background-color: #222;
 	min-height: 1200px;
 	padding: 0px;
 	padding-top: 7em;
@@ -13,7 +13,7 @@ body {
 	width: 100%;
 	padding: 1em 5em 0px 5em;
 	color: #777;
-	background-color: #077;
+	background-color: #222;
 }
 
 /* header */
@@ -27,7 +27,7 @@ body {
 	font: bold 46px Copperplate, Papyrus, fantasy;
 }
 .t3{
-	background-color: #222;
+	background-color: #077;
 	text-align: center;
 	font: bold 46px Copperplate, Papyrus, fantasy;
 }
