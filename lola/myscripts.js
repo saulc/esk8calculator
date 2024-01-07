@@ -54,20 +54,20 @@ document.getElementById("table").innerHTML = show(d);
 						];
 			var p = [66, 88, 99, 101, 33, 77, 44 ];
 			const pd = [
-							'<img src="./res/sk.jpg" alt="SK8" width="88">',
-							 '<img src="./res/cl.jpg" alt="SK8" width="88">',
- 							 '<img src="./res/sk88.jpg" alt="SK8" width="88">',
- 							 '<img src="./res/palms.jpg" alt="SK8" width="88">',
+							'<img src="./res/sk.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
+							 '<img src="./res/cl.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
+ 							 '<img src="./res/sk88.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
+ 							 '<img src="./res/palms.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
 							  "more", "less", "whatever"
 						]
 
 		var sn = [23, 33, 26, 31, 31, 24, 25, 26 ];
 		var san = ["Regular", "Classic", "Cali","idk", "21", "stuff", "thing", "undefined"];
 		var sd = [
-					'<img src="./res/lad.jpg" alt="SK8" width="88">',
-					'<img src="./res/lado.jpg" alt="SK8" width="88">',
-					'<img src="./res/vlm.jpg" alt="SK8" width="88">',
-					'<img src="./res/vla.jpg" alt="SK8" width="88">',
+					'<img src="./res/t.png" alt="SK8" width="88" class="zoom:hover zoom">',
+					'<img src="./res/lado.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
+					'<img src="./res/vlm.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
+					'<img src="./res/vla.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
 				]
 					var c = [ 7, 7, 7, 6, 5, 5, 5];
 					var cn = [
@@ -78,9 +78,10 @@ document.getElementById("table").innerHTML = show(d);
 				var ap = [121, 143, 100, 111, 51];
 				const a = [ "and a few", "more words", "Go here", "lala"];
 				const ad = [
-						'<img src="./res/sk.jpg" alt="SK8" width="88"> <img src="./res/sk88.jpg" alt="SK8" width="88"> <img src="./res/la.jpg" alt="SK8" width="88">',
-						'<img src="./res/bg.jpg" alt="SK8" width="88">',
-						'<img src="./res/mv.jpg" alt="SK8" width="88">',
+						'<img src="./res/sk.jpg" alt="SK8" width="88" class="zoom:hover zoom"> <img src="./res/sk88.jpg" alt="SK8" width="88" class="zoom:hover zoom"> <img src="./res/webb.jpg" alt="SK8" width="88" class="zoom:hover zoom"> <img src="./res/sw.png" alt="SK8" width="88" class="zoom:hover zoom">',
+						'<img src="./res/bg.jpg" alt="SK8" width="88" class="zoom:hover zoom"> <img src="./res/ap.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
+						'<img src="./res/mv.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
+						'<img src="./res/la.jpg" alt="SK8" width="88" class="zoom:hover zoom">'
 									];
 					var vp = [55, 88]
 						const v = [ "Blue", "Pink", "Green", "Orange"];
