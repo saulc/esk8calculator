@@ -57,7 +57,7 @@ document.getElementById("table").innerHTML = show(d);
 							'<img src="./res/sk.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
 							 '<img src="./res/cl.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
  							 '<img src="./res/sk88.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
- 							 '<img src="./res/palms.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
+ 							 '<img src="./res/b2f.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
 							  "more", "less", "whatever"
 						]
 
@@ -68,6 +68,8 @@ document.getElementById("table").innerHTML = show(d);
 					'<img src="./res/lado.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
 					'<img src="./res/vlm.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
 					'<img src="./res/vla.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
+					'<img src="./res/m16.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
+					'<img src="./res/m166.jpg" alt="SK8" width="88" class="zoom:hover zoom">'
 				]
 					var c = [ 7, 7, 7, 6, 5, 5, 5];
 					var cn = [
