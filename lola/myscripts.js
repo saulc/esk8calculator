@@ -29,7 +29,7 @@ function show(dat){
 }
 
 function sc() {
-	 var pre = 	"INSERT INTO menu (name, quantity) VALUES ('";
+	 var pre = 	 "INSERT INTO menu (name, quantity) VALUES ('";
 	 var po = "', 0 );<br>";
 		var d = ["CREATE TABLE menu (id INTEGER PRIMARY KEY, name char(100) NOT NULL, quantity INTEGER);<br>"
 		];
@@ -50,19 +50,21 @@ document.getElementById("table").innerHTML = show(d);
 //
 // }
 
-		const pl = [ "one", "$toned", "three", "four" , "five", "six", "seven"
+		const pl = [ "one", "$toned", "three", "four" , "five", "six", "seven" , "?"
 						];
-			var p = [66, 88, 99, 101, 33, 77, 44 ];
+			var p = [66, 88, 99, 101, 33, 77, 44, 88 ];
 			const pd = [
 							'<img src="./res/sk.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
 							 '<img src="./res/cl.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
- 							 '<img src="./res/sk88.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
+ 							 '<img src="./res/chopped.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
  							 '<img src="./res/b2f.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
-							  "more", "less", "whatever"
+							   '<img src="./res/ff.png" alt="SK8" width="88" class="zoom:hover zoom">',
+								  '<img src="./res/ff.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
+									 "whatever"
 						]
 
 		var sn = [23, 33, 26, 31, 31, 24, 25, 26 ];
-		var san = ["Regular", "Classic", "Cali","idk", "21", "stuff", "thing", "undefined"];
+		var san = ["Regular", "Classic", "Cali","idk", "21", "stuff", "fierce", "undefined"];
 		var sd = [
 					'<img src="./res/t.png" alt="SK8" width="88" class="zoom:hover zoom">',
 					'<img src="./res/lado.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
@@ -98,9 +100,23 @@ contact();
 		document.getElementById("tax").innerHTML = tt;
 	var d1 = 3;
 	var d2 = 5;
-	document.getElementById("d1").innerHTML = getPrice(d1, wtx);
+	// document.getElementById("d1").innerHTML = getPrice(d1, wtx);
 	// document.getElementById("d2").innerHTML = getPrice(d2, wtx);
 //plates
+var t1 = '  <tr ><td class="col-md-7"><p id="e'
+var t2 = '" class="mn"></p></td><td class="pri"><p id="ep'
+var t3 = '" class="pr"></p></td></tr>' ;
+var tp = [7, 7, 7]
+	//snacks
+	// var test = ""
+	// for (let i = 0; i < tp.length; i++) {
+	// 	var temp = t1 + i;
+	// 	temp += t2 + i +t3;
+	// 	test += temp;
+	// }
+	// 		document.getElementById( "cc"  ).innerHTML = test;
+
+
 
 		for (let i = 0; i < p.length; i++) {
 				document.getElementById( "item"+ (i+1) ).innerHTML = pl[i];

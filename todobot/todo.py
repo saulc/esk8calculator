@@ -84,7 +84,7 @@ def show_item(item):
 @route('/help')
 def help():
 
-    static_file('index.html', root='')
+    static_file('index.html', root='./lola/index.html')
 
 
 @route('/json<json:re:[0-9]+>')

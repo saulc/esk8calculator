@@ -2,9 +2,8 @@
 function contact() {
 		var a = document.getElementById("con").innerHTML;
 		if(a == ""){
-			var c = "MENU 21 <br> 213 314 1592<br> Los Angeles, Ca 90039" +
-			"<br> catering@LAmenu21.com<br>Lamenu21.com"
-			document.getElementById("con").innerHTML = c;
+			// var c = ". . ."
+			// document.getElementById("con").innerHTML = c;
 		}else
 			document.getElementById("con").innerHTML = "";
 		}
@@ -35,9 +34,15 @@ function calc() {
 				//full Payroll
 				"Daily: ", "Weekly", "Monthly", "Annual"
 		]
-		// for (let i = 0; i < cn.length; i++) {
-		// 		document.getElementById( "c"+ (i+1) ).innerHTML = cn[i];
-		// 		// document.getElementById("cp"+ (i+1) ).innerHTML = getPrice(c[i], wtx);
-		// 		}
-
+		var et = 0;
+		var st = 0;
+		for (let i = 0; i < 5; i++) {
+				et += Number(document.getElementById( "e"+ (i+1) ).value);
+				st += Number(document.getElementById( "s"+ (i+1) ).value);
+				// document.getElementById("cp"+ (i+1) ).innerHTML = getPrice(c[i], wtx);
+				}
+		 	document.getElementById( "et"  ).value= et;
+		 	document.getElementById( "st"  ).value= st;
+			var c = et + ". . ." + st+ " ... profit: $" + (st-et)
+					document.getElementById("con").innerHTML = c
 }

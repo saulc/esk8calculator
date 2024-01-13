@@ -35,11 +35,12 @@ def new_item():
 
     if request.GET.save:
 
-        new = request.GET.task.strip()
+        new = request.GET.id.strip()
+        qty = request.GET.qty.strip()
         conn = sqlite3.connect('order.db')
         c = conn.cursor()
 
-        c.execute("INSERT INTO orders (id, quantity, status) VALUES (?,?)", (new, 1, 1))
+        c.execute("INSERT INTO orders (id, quantity, status) VALUES (?,?, ?)", (new, qty, 1))
         new_id = c.lastrowid
 
         conn.commit()
@@ -75,7 +76,7 @@ def edit_item(no):
         c.execute("SELECT item FROM orders WHERE id LIKE ?", (str(no)))
         cur_data = c.fetchone()
 
-        return template('edit_task', old=cur_data, no=no)
+        return template('edit_task.tpl', old=cur_data, no=no)
 
 
 @route('/item<item:re:[0-9]+>')

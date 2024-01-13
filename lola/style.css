@@ -19,11 +19,10 @@ body {
   padding: 5px;
   background-color: #ccc;
   transition: transform .2s; /* Animation */
-
   margin: 0 auto;
 }
 
-.zoom:hover {
+.zoom:hover { 
   transform: scale(2.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 

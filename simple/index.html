@@ -57,9 +57,9 @@
              <li class="active"><a href="http://calc.esk8.today/advanced">Advanced Calculator</a></li>
 
             <li><a href="http://esk8.today">eSk8.today</a></li>
-            
+
           </ul>
-       
+
         </div><!--/.nav-collapse -->
       </div>
     </nav>
@@ -68,7 +68,7 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-    
+
           <div class="row">
           <div class="col-md-4">
           <h3>Battery information</h3>
@@ -78,19 +78,19 @@
             <h4><p id="batteryinfo"</p></h4>
            </div>
 
-            
+
         </div>
-      
+
 
               <!-- user input -->
               <!-- cell type -->
-             
-     
+
+
        <div class="row">
           <div class="col-md-4">
       <form class="form" onblur="calc()">
         <div class="form-group">
-           <div class="input-group-addon">Cell Type   : 
+           <div class="input-group-addon">Cell Type   :
            <select id="type">
             <option value="3.7">Lipo 3.7V</option>
             <option value="3.6">Li-ion 3.6V</option>
@@ -101,7 +101,7 @@
           <input type="checkbox" id="usec" onblur="calc()" checked="true"> Use C ratings
         </label>
       </div>
-    
+
           <label class="sr-only" for="scells"># of cells in series</label>
           <div class="input-group">
             <div class="input-group-addon">#</div>
@@ -110,7 +110,7 @@
             <input type="text" class="form-control" id="pcells" value="1" onblur="calc()">
             <div class="input-group-addon">Parallel</div>
           </div>
-        
+
           <div class="input-group">
             <div class="input-group-addon">Cell Capacity</div>
             <input type="text" class="form-control" id="cc" value="5" onblur="calc()">
@@ -123,7 +123,7 @@
             <input type="text" class="form-control" id="dc" value="10" onblur="calc()">
             <div class="input-group-addon">C</div>
           </div>
-         
+
           <div class="input-group">
             <div class="input-group-addon">Max   Discharge :</div>
             <input type="text" class="form-control" id="mda" value="100" onblur="calc()">
@@ -131,8 +131,8 @@
              <input type="text" class="form-control" id="mdc" value="20" onblur="calc()">
             <div class="input-group-addon">C</div>
           </div>
-         
-       
+
+
         </div>
         </form>
 
@@ -173,7 +173,7 @@
             <div class="input-group-addon">W-hr per mile</div>
           </div>
         </br>
-       
+
         </form>
           </div>
         </br>
@@ -196,7 +196,7 @@
             <td class="col-md-1">Loaded Speed: </td>
             <td class="col-md-1 text-center"><p id="speedk"></p></td>
             <td class="col-md-1"> kph</td>
-          </tr> 
+          </tr>
           <tr class="active">
              <td class="col-md-1">Max Speed: </td>
             <td class="col-md-1 text-center"><p id="mspeed"></p></td>
@@ -206,12 +206,12 @@
             <td class="col-md-1">Max Speed: </td>
             <td class="col-md-1 text-center"><p id="mspeedk"></p></td>
             <td class="col-md-1"> kph</td>
-          </tr> 
+          </tr>
            <tr class="info">
             <td class="col-md-1">Estimated Range: </td>
             <td class="col-md-1"><p id="range"></p></td>
             <td class="col-md-1">Miles</td>
-          </tr>    
+          </tr>
           <tr class="info">
             <td class="col-md-1">Estimated Range: </td>
             <td class="col-md-1"><p id="rangek"></p></td>
@@ -246,6 +246,16 @@
             <td class="col-md-1"><p id="batterypower"></p></td>
             <td class="col-md-1">Watts (W)</td>
           </tr>
+           <tr class=" ">
+              <td class="col-md-1">Cont. Battery Power:</td>
+              <td class="col-md-1"><p id="contbatterypowerhp"></p></td>
+              <td class="col-md-1">horse Power (hp)</td>
+            </tr>
+             <tr class=" ">
+              <td class="col-md-1">Max Battery Power:</td>
+              <td class="col-md-1"><p id="batterypowerhp"></p></td>
+              <td class="col-md-1">horse Power (hp)</td>
+            </tr>
 
            <tr class="warning">
             <td class="col-md-1">Cont. Discharge </td>
@@ -257,7 +267,7 @@
             <td class="col-md-1"><p id="md"></p></td>
             <td class="col-md-1">Amps (A)</td>
           </tr>
-   
+
         </table>
         </div>
 
@@ -265,7 +275,7 @@
            <div class="col-md-2">
                <table class="table table-striped table-condensed">
                  </tr>
-      
+
             <tr class="danger">
             <td class="col-md-1 text-center"><p id="erpm"></p></td>
             <td class="col-md-1"> Max Erpm</td>
@@ -295,15 +305,15 @@
            </div>
 
           </div> <!-- /row -->
-        
+
       </div>
-    
-   
+
+
 
         <button onclick="javascript:calc()" method="post" type="submit" class="btn btn-primary btn-block">Calculate</button>
-    
-       
-      
+
+
+
 
     </div> <!-- /container -->
 

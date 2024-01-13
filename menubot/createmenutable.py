@@ -1,31 +1,30 @@
 import sqlite3
 conn = sqlite3.connect('order.db')
-conn.execute("CREATE TABLE menu (id INTEGER PRIMARY KEY, name char(100) NOT NULL, quantity INTEGER, returned INTEGER)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Baseball Steak and Garlic Mashed Potatoes', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Filet Mignon with Potatoes Au Gratin', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Grilled Chicken with Potatoes Au Gratin', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Seared Salmon and Croquettes', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Scallops and Linguine with white wine sauce', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Shrimp and Linguine', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Chicken', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Regular', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Classic', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Cali', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Western', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Loaded', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Wrap', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Sliders', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Shrimp Ceviche', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Seafood Cakes', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Potato Skins', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Fried Shrimp with Fries', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Chicken Strips', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('House Salad', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Sauted Vegetables', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Squash Mozzarella sticks', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Onion Rings', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('SweetPotato Fries', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Carrot Fries', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Fries', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Sauted Vegetables and Mixed KimChi', 0 , 0)")
-conn.execute("INSERT INTO menu (name, quantity, returned) VALUES ('Sauted Vegetables', 0 , 0)")
+CREATE TABLE menu (id INTEGER PRIMARY KEY, name char(100) NOT NULL, quantity INTEGER);
+INSERT INTO menu (name, quantity) VALUES ('one', 0 );
+INSERT INTO menu (name, quantity) VALUES ('$toned', 0 );
+INSERT INTO menu (name, quantity) VALUES ('three', 0 );
+INSERT INTO menu (name, quantity) VALUES ('four', 0 );
+INSERT INTO menu (name, quantity) VALUES ('five', 0 );
+INSERT INTO menu (name, quantity) VALUES ('six', 0 );
+INSERT INTO menu (name, quantity) VALUES ('seven', 0 );
+INSERT INTO menu (name, quantity) VALUES ('?', 0 );
+INSERT INTO menu (name, quantity) VALUES ('Regular', 0 );
+INSERT INTO menu (name, quantity) VALUES ('Classic', 0 );
+INSERT INTO menu (name, quantity) VALUES ('Cali', 0 );
+INSERT INTO menu (name, quantity) VALUES ('idk', 0 );
+INSERT INTO menu (name, quantity) VALUES ('21', 0 );
+INSERT INTO menu (name, quantity) VALUES ('stuff', 0 );
+INSERT INTO menu (name, quantity) VALUES ('fierce', 0 );
+INSERT INTO menu (name, quantity) VALUES ('undefined', 0 );
+INSERT INTO menu (name, quantity) VALUES ('and a few', 0 );
+INSERT INTO menu (name, quantity) VALUES ('more words', 0 );
+INSERT INTO menu (name, quantity) VALUES ('Go here', 0 );
+INSERT INTO menu (name, quantity) VALUES ('lala', 0 );
+INSERT INTO menu (name, quantity) VALUES ('words', 0 );
+INSERT INTO menu (name, quantity) VALUES ('words', 0 );
+INSERT INTO menu (name, quantity) VALUES ('more words', 0 );
+INSERT INTO menu (name, quantity) VALUES ('Blue', 0 );
+INSERT INTO menu (name, quantity) VALUES ('Pink', 0 );
+INSERT INTO menu (name, quantity) VALUES ('Green', 0 );
+INSERT INTO menu (name, quantity) VALUES ('Orange', 0 );

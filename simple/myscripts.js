@@ -9,7 +9,7 @@ function calc() {
     var da =  document.getElementById("da").value;
     var dc =  document.getElementById("dc").value;
     var usec = document.getElementById("usec").checked;
-    
+
 
 
 
@@ -19,7 +19,7 @@ function calc() {
 
         document.getElementById("mda").disabled = usec;
         document.getElementById("da").disabled = usec;
-   
+
     if(!usec){
     document.getElementById("md").innerHTML = (mda * p).toFixed(2);
     document.getElementById("mdc").value = mda/c;
@@ -31,12 +31,12 @@ function calc() {
     else{
     document.getElementById("md").innerHTML = (mdc*c * p).toFixed(2);
     document.getElementById("mda").value = mdc*c;
-    
+
     document.getElementById("cd").innerHTML = (dc*c * p).toFixed(2);
     document.getElementById("da").value = dc*c;
     }
 
-    
+
 
     var text = s + "s" + p +"p " + (c*p).toFixed(2) + "Ah";
     document.getElementById("batteryinfo").innerHTML = text;
@@ -50,6 +50,10 @@ function calc() {
     document.getElementById("batterypower").innerHTML = text.toFixed(2);
     var battpower = t*s*da*p;
     document.getElementById("contbatterypower").innerHTML = battpower.toFixed(2);
+		var hp = t*s*mda*p*.0013401;
+		document.getElementById("batterypowerhp").innerHTML = hp.toFixed(2);
+		var battpower = t*s*da*p*.0013401;
+		document.getElementById("contbatterypowerhp").innerHTML = battpower.toFixed(2);
 
     var kv =  document.getElementById("kv").value;
     var ef =  document.getElementById("eff").value;
@@ -89,9 +93,7 @@ function calc() {
      range = range*1.609344;
       document.getElementById("rangek").innerHTML = range.toFixed(2);
 
- 
 
-    
+
+
 }
-
-
