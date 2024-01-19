@@ -58,8 +58,8 @@ document.getElementById("table").innerHTML = show(d);
 							 '<img src="./res/cl.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
  							 '<img src="./res/chopped.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
  							 '<img src="./res/b2f.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
-							   '<img src="./res/ff.png" alt="SK8" width="88" class="zoom:hover zoom">',
-								  '<img src="./res/ff.jpg" alt="SK8" width="88" class="zoom:hover zoom">',
+							   '<img src="./res/ff.png" alt="SK8" width="88" class="zoom:hover zoom"><br>fast',
+								  '<img src="./res/ff.jpg" alt="SK8" width="88" class="zoom:hover zoom"><br>fast',
 									 "whatever"
 						]
 
