@@ -151,13 +151,21 @@ var ds = f4*l4 + f3*l3 + f2*l2 + f1*l1;
 	document.getElementById( "pp4").innerHTML	= "cost%: " + (l4/f4).toFixed(1) ;
 	document.getElementById( "pd4").innerHTML = "Profit Per: " + cvtC(l4 - f4);
 
-		document.getElementById("fca" ).innerHTML = "Average Costs %: "
+		var ts = Number(l1) + Number(l2) + Number(l3) + Number(l4);
+		var tc = Number(f1) + Number(f2) + Number(f3) + Number(f4);
+			ts = ts*1000;
+			tc = tc *1000;
+		document.getElementById("fca" ).innerHTML = "sellout total $: " + cvtC(ts);
 		var fcavg = (l1/f1) + l2/f2 + l3/f3 + l4/f4;
 		fcavg /= 4;
-		document.getElementById("fcavg" ).innerHTML = fcavg.toFixed(2) +"% ";
+		document.getElementById("fcavg" ).innerHTML = "Average Costs: " +fcavg.toFixed(2) +"% ";
 
-		  // var sellout = l1+l2+l3+l4;
+		  // var sellout = 0;
+			// sellfout += l1+l2+l3+l4;
   var sellout = 10000;    //fixed daily
+
+	sellout = document.getElementById( "som").value;
+	sellout = Number(sellout);
 	var totalportions = sellout/50;  //daily / avg price
 	document.getElementById( "t1").innerHTML = "SellOut Total: "
 	document.getElementById( "tt1").innerHTML = cvtC( sellout );
@@ -179,7 +187,7 @@ var ds = f4*l4 + f3*l3 + f2*l2 + f1*l1;
 	bulkpercent = bulkpercent/100;
 	var bulk = bulkpercent*(f4*l4 + f3*l3 + f2*l2 + f1*l1);
 	var td = Number(tgc)+Number(wc)+(1+bulkpercent)*(f4*l4 + f3*l3 + f2*l2 + f1*l1);
-	var netover =  ae/daysayear  + ((sqft*monthrate)/4/7) + (anper*minworkers)/daysayear;
+	var netover =  tc/30 + ae/daysayear  + ((sqft*monthrate)/4/7) + (anper*minworkers)/daysayear;
 	//daily ex + rent + payroll
 	var profit =  sellout - netover;
 	var evenpercent = (100*netover/sellout);

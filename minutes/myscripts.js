@@ -32,6 +32,7 @@ function calc() {
 
 			// var hours = document.getElementById("hours").value;
 			var minutes = document.getElementById("minutes").value;
+			minutes = Number(minutes);
 			// var seconds = document.getElementById("seconds").value = minutes*60;
 			// var hours = document.getElementById("hours").value = minutes /60;
 
@@ -62,6 +63,7 @@ document.getElementById("cp11" ).innerHTML = x;
 
 	var khp = 1.341;
 	var year = document.getElementById("years").value;
+	year = Number(year);
 		// document.getElementById("yp1" ).innerHTML =  cvtC(year*khp	);
 
 
@@ -69,6 +71,7 @@ document.getElementById("cp11" ).innerHTML = x;
 		document.getElementById("yp2" ).innerHTML =  cvtC(year*12	);
 		document.getElementById("yp3" ).innerHTML =  cvtC(year*52	);
 		document.getElementById("yp4" ).innerHTML =  cvtC(year*365	);
-		// document.getElementById("yp5" ).innerHTML =  cvtC(year*365*24	);
-		// document.getElementById("yp6" ).innerHTML =  cvtC(year*365*24*60	);
+		document.getElementById("yp5" ).innerHTML =  cvtC(year*365*24	);
+		document.getElementById("yp6" ).innerHTML =  cvtC(year*365*24*60	);
+		document.getElementById("yp7" ).innerHTML =  cvtC(year*365*24*60*60	);
 }
