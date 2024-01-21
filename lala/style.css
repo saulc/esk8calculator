@@ -23,25 +23,25 @@ body {
 /* header */
 .topbar{
 	text-align: center;
-	font: bold 46px Georgia, serif;
+	font: bold 46px Copperplate, Papyrus, fantasy;
 }
 
 /* Title bars */
 .hd{	color: #ccc;
-	font: bold 24px Georgia, serif;
+font: bold 24px Copperplate, Papyrus, fantasy;
 		padding: 0px 15px 0px 15px;
 }
 
 /* main item name */
 .mn{	color: #ccc;
-	font: bold 14px Georgia, serif;
+	font: bold 14px Copperplate, Papyrus, fantasy;
 	padding: 0px 15px 0px 15px;
 	    margin-bottom: 0rem;
 }
 
 /* item price text */
 .pr{	color: #ccc;
-	font: italic 14px Georgia, serif;
+	font: italic 14px Copperplate, Papyrus, fantasy;
 	padding: 0px 0px 0px 11px;
 	    margin-bottom: 0rem;
 }
@@ -79,7 +79,7 @@ body {
 	background-color: #111;
 	color: #fff;
 	text-align: center;
-	font: normal 16px Georgia, serif;
+	font: normal 16px  Copperplate, Papyrus, fantasy;
 }
 
 .tx{

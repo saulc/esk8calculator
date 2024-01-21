@@ -156,13 +156,16 @@ var ds = f4*l4 + f3*l3 + f2*l2 + f1*l1;
 			ts = ts*1000;
 			tc = tc *1000;
 		document.getElementById("fca" ).innerHTML = "sellout total $: " + cvtC(ts);
-		var fcavg = (l1/f1) + l2/f2 + l3/f3 + l4/f4;
-		fcavg /= 4;
+		// var fcavg = (l1/f1) + l2/f2 + l3/f3 + l4/f4;
+		var fcavg = (f1/l1) + f2/l2 + f3/l3 + f4/l4;
+		fcavg /= 4; fcavg *= 100;
 		document.getElementById("fcavg" ).innerHTML = "Average Costs: " +fcavg.toFixed(2) +"% ";
 
+		document.getElementById("f" ).innerHTML = "sellout cost $: " + cvtC(tc);
+				document.getElementById("favg" ).innerHTML = "sellout profit $: " + cvtC(ts-tc);
 		  // var sellout = 0;
 			// sellfout += l1+l2+l3+l4;
-  var sellout = 10000;    //fixed daily
+  // var sellout = ts/30;    //fixed daily
 
 	sellout = document.getElementById( "som").value;
 	sellout = Number(sellout);

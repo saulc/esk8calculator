@@ -36,13 +36,13 @@ function calc() {
 		]
 		var et = 0;
 		var st = 0;
-		for (let i = 0; i < 5; i++) {
+		for (let i = 0; i < 7; i++) {
 				et += Number(document.getElementById( "e"+ (i+1) ).value);
 				st += Number(document.getElementById( "s"+ (i+1) ).value);
 				// document.getElementById("cp"+ (i+1) ).innerHTML = getPrice(c[i], wtx);
 				}
-		 	document.getElementById( "et"  ).value= et;
-		 	document.getElementById( "st"  ).value= st;
 			var c = et + ". . ." + st+ " ... profit: $" + (st-et)
 					document.getElementById("con").innerHTML = c
+			 	document.getElementById( "et").value = et;
+			 	document.getElementById( "st").value = st;
 }

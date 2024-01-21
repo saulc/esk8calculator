@@ -74,4 +74,6 @@ document.getElementById("cp11" ).innerHTML = x;
 		document.getElementById("yp5" ).innerHTML =  cvtC(year*365*24	);
 		document.getElementById("yp6" ).innerHTML =  cvtC(year*365*24*60	);
 		document.getElementById("yp7" ).innerHTML =  cvtC(year*365*24*60*60	);
+
+		document.getElementById("yp8" ).innerHTML =   year*365*24*60	;
 }
