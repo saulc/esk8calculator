@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>MythMath</title>
+    <title>Myth</title>
     <!-- bootstrap theme -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
@@ -23,7 +23,182 @@
       <h1>Acme Math</h1></div>
   </div> <!-- end jumbotron -->
 
-<div id="main" class="container">
+  <div id="main" class="container">
+    <div class="row" >
+    <div class="col-md-2">
+    <table class="table table-hover table-borderless">
+    <th class="col hd text-center" colspan="2">Payroll: </th>
+    <tbody>
+      <tr ><td class="contact" colspan="2">
+      <div class="input-group">
+      <div class="input-group-addon col-md-8">Hourly $: </div>
+      <input type="text" class="form-control col-md-4" id="hrt" value="22" onblur="calc()">
+      </div></td></tr>
+      <tr ><td class="contact" colspan="2">
+      <div class="input-group">
+      <div class="input-group-addon col-md-8">Hours/week: </div>
+      <input type="text" class="form-control col-md-4" id="hours" value="36" onblur="calc()">
+      </div></td></tr>
+
+
+      <tr >
+      <td class="col-md-7"><p id="c1" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp1" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="c2" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp2" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md7"><p id="c3" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp3" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="c4" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp4" class="pr"></p></td>
+      </tr>
+      <tr ><td class=" contact" colspan="2">
+      <div class="input-group">
+      <div class="input-group-addon col-md-8">Shift Length: </div>
+      <input type="text" class="form-control col-md-4" id="shiftlen" value="8" onblur="calc()">
+      </div></td></tr>
+      <tr ><td class="contact" colspan="2">
+      <div class="input-group">
+      <div class="input-group-addon col-md-8">workers/shift: </div>
+      <input type="text" class="form-control col-md-4" id="xw" value="5" onblur="calc()">
+      </div></td></tr>
+      <tr ><td class="contact" colspan="2">
+      <div class="input-group">
+      <div class="input-group-addon col-md-8">Hours Open: </div>
+      <input type="text" class="form-control col-md-4" id="hoursaday" value="12" onblur="calc()">
+      </div></td></tr>
+      <tr >
+      <td class="col-md-7"><p id="c5" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp5" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="c6" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp6" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="c7" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp7" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="c8" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp8" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="c9" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp9" class="pr"></p></td>
+      </tr>
+      <th class="col hd text-center" colspan="2">Payroll: </th>
+      <tr >
+      <td class="col-md-7"><p id="c10" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp10" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="c11" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp11" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="c12" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp12" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="c13" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp13" class="pr"></p></td>
+      </tr>
+      <tr >
+      <td class="col-md-7"><p id="c14" class="mn"></p></td>
+      <td class="col-md-1"><p id="cp14" class="pr"></p></td>
+      </tr>
+      </tbody>
+      </table>
+
+      </div>
+
+ 
+      <div class="col-md-3">
+      <table class="table table-hover table-borderless">
+      <th class="col hd text-center" colspan="2">Members: </th>
+      <tbody>
+        <tr ><td class="contact" colspan="2">
+        <div class="input-group">
+        <div class="input-group-addon col-md-8">Monthly $: </div>
+        <input type="text" class="form-control col-md-4" id="monthly" value="55" onblur="calc()">
+        </div></td></tr>
+        <tr ><td class="contact" colspan="2">
+        <div class="input-group">
+        <div class="input-group-addon col-md-8">active : </div>
+        <input type="text" class="form-control col-md-4" id="acm" value="312" onblur="calc()">
+        </div></td></tr>
+        <tr ><td class="contact" colspan="2">
+        <div class="input-group">
+        <div class="input-group-addon col-md-8">new : </div>
+        <input type="text" class="form-control col-md-4" id="newm" value="3" onblur="calc()">
+        </div></td></tr>
+        <tr ><td class="contact" colspan="2">
+        <div class="input-group">
+        <div class="input-group-addon col-md-8">Sqft : </div>
+        <input type="text" class="form-control col-md-4" id="sqft" value="3000" onblur="calc()">
+        </div></td></tr>
+        <tr ><td class="contact" colspan="2">
+        <div class="input-group">
+        <div class="input-group-addon col-md-8">$ per sqft : </div>
+        <input type="text" class="form-control col-md-4" id="sq" value="3" onblur="calc()">
+        </div></td></tr>
+              <tr >
+              <td class="col-md-7"><p id="a1" class="mn"></p></td>
+              <td class="col-md-1"><p id="b1" class="pr"></p></td>
+              </tr>
+                    <tr >
+                    <td class="col-md-7"><p id="a2" class="mn"></p></td>
+                    <td class="col-md-1"><p id="b2" class="pr"></p></td>
+                    </tr>
+                          <tr >
+                          <td class="col-md-7"><p id="a3" class="mn"></p></td>
+                          <td class="col-md-1"><p id="b3" class="pr"></p></td>
+                          </tr>
+              <tr >
+              <td class="col-md-7"><p id="m1" class="mn"></p></td>
+              <td class="col-md-1"><p id="mm1" class="pr"></p></td>
+              </tr>
+              <tr >
+              <td class="col-md-7"><p id="m2" class="mn"></p></td>
+              <td class="col-md-1"><p id="mm2" class="pr"></p></td>
+              </tr>
+              <tr >
+              <td class="col-md-7"><p id="m3" class="mn"></p></td>
+              <td class="col-md-1"><p id="mm3" class="pr"></p></td>
+              </tr>
+              <tr >
+              <td class="col-md-7"><p id="m4" class="mn"></p></td>
+              <td class="col-md-1"><p id="mm4" class="pr"></p></td>
+              </tr>
+              <tr >
+              <td class="col-md-7"><p id="m5" class="mn"></p></td>
+              <td class="col-md-1"><p id="mm5" class="pr"></p></td>
+              </tr>
+              <tr >
+              <td class="col-md-7"><p id="m6" class="mn"></p></td>
+              <td class="col-md-1"><p id="mm6" class="pr"></p></td>
+              </tr>
+              <tr >
+              <td class="col-md-7"><p id="m7" class="mn"></p></td>
+              <td class="col-md-1"><p id="mm7" class="pr"></p></td>
+              </tr>
+              <tr >
+              <td class="col-md-7"><p id="m8" class="mn"></p></td>
+              <td class="col-md-1"><p id="mm8" class="pr"></p></td>
+              </tr>
+              </tbody>
+              </table>
+
+          </div>
+
+          </div>
+
   <div class="row" >
     <p id="day"></p>
     <div class="col-md-3">
@@ -143,7 +318,7 @@
         <tr ><td class="contact" colspan="2">
         <div class="input-group">
         <div class="input-group-addon col-md-8">Sales $: </div>
-        <input type="text" class="form-control col-md-4" id="s5" value="36000" onblur="calc()">
+        <input type="text" class="form-control col-md-4" id="s5" value="360" onblur="calc()">
         </div></td></tr>
 
 

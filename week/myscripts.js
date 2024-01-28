@@ -45,4 +45,84 @@ function calc() {
 					document.getElementById("con").innerHTML = c
 			 	document.getElementById( "et").value = et;
 			 	document.getElementById( "st").value = st;
+				//drinks
+
+
+				//hours
+
+					var hrt = document.getElementById("hrt").value;
+					var hours = document.getElementById("hours").value;
+
+					var workerspershift = document.getElementById("xw").value ;
+					var hoursaday = document.getElementById("hoursaday").value;
+					var shiftlen = document.getElementById("shiftlen").value;
+					//snacks
+					var cn = [
+						  "daily", "weekly", "monthly", "annual",
+							"Open/week: ", "shifts/ week: ", "shift/worker",
+							"Full cover xw: ", "Min #workers: ",
+							//full Payroll
+							"Daily: ", "Weekly", "Monthly", "Annual"
+					]
+					for (let i = 0; i < cn.length; i++) {
+							document.getElementById( "c"+ (i+1) ).innerHTML = cn[i];
+							// document.getElementById("cp"+ (i+1) ).innerHTML = getPrice(c[i], wtx);
+							}
+
+					var anper = hrt * hours*52;
+					var fw = (hoursaday*7)/hours;
+					var minworkers = workerspershift*fw;
+
+					document.getElementById("cp1" ).innerHTML = cvtC(hrt * shiftlen);
+					document.getElementById("cp2" ).innerHTML = cvtC(hrt * hours);
+					document.getElementById("cp3" ).innerHTML = cvtC(hrt * hours*4); //monthly
+					document.getElementById("cp4" ).innerHTML = cvtC(anper); //year
+
+					document.getElementById("cp5" ).innerHTML = hoursaday*7;
+					document.getElementById("cp6" ).innerHTML = (hoursaday*7)/shiftlen;
+					document.getElementById("cp7" ).innerHTML = (hours)/shiftlen;
+					document.getElementById("cp8" ).innerHTML = fw.toFixed(2);
+					document.getElementById("cp9" ).innerHTML = minworkers.toFixed(0)
+					+ " / " + minworkers.toFixed(2);
+
+					document.getElementById("cp10" ).innerHTML = cvtC((anper*minworkers)/daysayear);
+					document.getElementById("cp11" ).innerHTML = cvtC((anper*minworkers)/52);
+					document.getElementById("cp12" ).innerHTML = cvtC((anper*minworkers)/12); //monthly
+					document.getElementById("cp13" ).innerHTML = cvtC(anper*minworkers); //year
+
+				//Monthly
+
+			var monthly = Number(document.getElementById( "monthly" ).value);
+			var acm = Number(document.getElementById( "acm" ).value);
+			var newm = Number(document.getElementById( "newm" ).value);
+			var total = monthly*(newm+acm);
+			document.getElementById("m1").innerHTML = "current Monthly: $";
+			document.getElementById("mm1").innerHTML = cvtC(monthly*acm);
+			document.getElementById("m2").innerHTML = "new Monthly: +$";
+			document.getElementById("mm2").innerHTML = cvtC(monthly*newm);
+			document.getElementById("m3").innerHTML = "total Monthly: +$";
+			document.getElementById("mm3").innerHTML = cvtC(total);
+			document.getElementById("m4").innerHTML = "annual: $";
+			document.getElementById("mm4").innerHTML = cvtC(total*12);
+
+
+			var sqft = Number(document.getElementById( "sqft" ).value);
+			var sq = Number(document.getElementById( "sq" ).value);
+			var rent = sqft*sq;
+
+			var userper = sqft/50; //max capcity
+			document.getElementById("a1").innerHTML = "Max capacity: ";
+			document.getElementById("b1").innerHTML = userper;
+
+			document.getElementById("m5").innerHTML = "montly Rent: $";
+			document.getElementById("mm5").innerHTML = cvtC(rent);
+			document.getElementById("m6").innerHTML = "annual rent: $";
+			document.getElementById("mm6").innerHTML = cvtC(rent*12);
+			document.getElementById("m7").innerHTML = "profit Montly: $";
+			document.getElementById("mm7").innerHTML = cvtC(total-rent-(anper*minworkers)/12);
+			document.getElementById("m8").innerHTML = "annual Profit: $";
+			document.getElementById("mm8").innerHTML = cvtC((total-rent)*12-anper*minworkers);
+
+
+
 }
