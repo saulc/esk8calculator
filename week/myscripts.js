@@ -13,9 +13,29 @@ function cvtC(p){
 	 s+= Number(p.toFixed(2) ).toLocaleString();
 	return s;
 }
+function createTable(TestTitle, rows){
+	var pre = '<div class="col-md"><table class="table table-hover table-borderless"><th class="col hd text-center" colspan="2">'
+	var endtitle = '</th><tbody>'
+	var endtable = '</tbody></table></div>'
+	var pre1 = '<tr ><td class="col-md-7"><p class="mn" id="'
+	var pre2 = '" ></p></td><td class="col-md-1"><p id="'
+	var pre3 = '" class="pr"></p></td></tr>'
+			var t = pre + TestTitle + endtitle ;
+			for(let i =1; i<=rows; i++){
+				t+= pre1 + 'aa' + i +pre2;
+				t+=  'ab' + i + pre3;
+			}
+			t += endtable;
+			return t;
+}
+
+function testTable(rows){
+	return 'Test: ';
+}
 
 function calc() {
 
+					document.getElementById("pp").innerHTML = createTable('New Table', 10);
 	//drinks
 	const daysayear = 364; //7x52
 	var wtx = document.getElementById("tx").checked;
@@ -45,10 +65,13 @@ function calc() {
 					document.getElementById("con").innerHTML = c
 			 	document.getElementById( "et").value = et;
 			 	document.getElementById( "st").value = st;
-				//drinks
 
+				//test loop
+				for (let i = 0; i < 10; i++) {
+					  document.getElementById( "aa"+ (i+1) ).innerHTML = cn[i];
+						document.getElementById( "ab"+ (i+1) ).innerHTML = i;
+						}
 
-				//hours
 
 					var hrt = document.getElementById("hrt").value;
 					var hours = document.getElementById("hours").value;

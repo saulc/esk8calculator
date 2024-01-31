@@ -36,9 +36,11 @@ function calc() {
     document.getElementById("da").value = dc*c;
     }
 
+    var cellweight = document.getElementById("cw").value/1000;
+		var packweight = (s*p*cellweight);
 
-
-    var text = s + "s" + p +"p " + (c*p).toFixed(2) + "Ah";
+    var text = s + "s" + p +"p " + (c*p).toFixed(2) + "Ah cells: " + (s*p)
+		+ " Pack weight: "+ packweight + " kg = " + (packweight*2.2).toFixed(2) + " lbs";
     document.getElementById("batteryinfo").innerHTML = text;
     text = t*s;
     document.getElementById("batteryvol").innerHTML = text.toFixed(2);

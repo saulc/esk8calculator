@@ -99,6 +99,7 @@ function calc() {
 
 var cn = [
 	"item1 cost %: ", "item2 cost %: ", "item3 cost %: " , "item4 cost %: "
+	, "item5 cost %: " , "item6 cost %: ", "item7 cost %: " , "item8 cost %: "
 
 ]
 for (let i = 0; i < cn.length; i++) {
@@ -114,12 +115,25 @@ var f3 = document.getElementById("f3").value;
 var l3 = document.getElementById("lb3").value;
 var f4 = document.getElementById("f4").value;
 var l4 = document.getElementById("lb4").value;
+var f5 = document.getElementById("f5").value;
+var l5 = document.getElementById("lb5").value;
+var f6 = document.getElementById("f6").value;
+var l6 = document.getElementById("lb6").value;
+var f7 = document.getElementById("f7").value;
+var l7 = document.getElementById("lb7").value;
+var f8 = document.getElementById("f8").value;
+var l8 = document.getElementById("lb8").value;
+
 
 
 	document.getElementById( "fb1").innerHTML =   (100*f1/l1).toFixed(2);
 	document.getElementById( "fb2").innerHTML =   (100*f2/l2).toFixed(2);
 	document.getElementById( "fb3").innerHTML =   (100*f3/l3).toFixed(2);
 	document.getElementById( "fb4").innerHTML =   (100*f4/l4).toFixed(2);
+	document.getElementById( "fb5").innerHTML =   (100*f5/l5).toFixed(2);
+	document.getElementById( "fb6").innerHTML =   (100*f6/l6).toFixed(2);
+	document.getElementById( "fb7").innerHTML =   (100*f7/l7).toFixed(2);
+	document.getElementById( "fb8").innerHTML =   (100*f8/l8).toFixed(2);
 
 
 		document.getElementById( "pa1").innerHTML= "Total cost: " + cvtC(f1*1000);
@@ -133,6 +147,18 @@ var l4 = document.getElementById("lb4").value;
 
 		document.getElementById( "pa4").innerHTML= "Total cost: " + cvtC(f4*1000);
 		document.getElementById( "pb4").innerHTML= "Total profit: " + cvtC((l4-f4)*1000);
+
+		document.getElementById( "pa5").innerHTML= "Total cost: " + cvtC(f5*1000);
+		document.getElementById( "pb5").innerHTML= "Total profit: " + cvtC((l5-f5)*1000);
+
+		document.getElementById( "pa6").innerHTML= "Total cost: " + cvtC(f6*1000);
+		document.getElementById( "pb6").innerHTML= "Total profit: " + cvtC((l6-f6)*1000);
+
+		document.getElementById( "pa7").innerHTML= "Total cost: " + cvtC(f7*1000);
+		document.getElementById( "pb7").innerHTML= "Total profit: " + cvtC((l7-f7)*1000);
+
+		document.getElementById( "pa8").innerHTML= "Total cost: " + cvtC(f8*1000);
+		document.getElementById( "pb8").innerHTML= "Total profit: " + cvtC((l8-f8)*1000);
 
 	document.getElementById( "pc1").innerHTML= "Total Sale: " + cvtC(l1*1000);
 	document.getElementById( "pp1").innerHTML	= "cost%: " + (l1/f1).toFixed(1) ;
@@ -150,8 +176,26 @@ var l4 = document.getElementById("lb4").value;
 	document.getElementById( "pp4").innerHTML	= "cost%: " + (l4/f4).toFixed(1) ;
 	document.getElementById( "pd4").innerHTML = "Profit Per: " + cvtC(l4 - f4);
 
-		var ts = Number(l1) + Number(l2) + Number(l3) + Number(l4);
-		var tc = Number(f1) + Number(f2) + Number(f3) + Number(f4);
+	document.getElementById( "pc5").innerHTML= "Total Sale: " + cvtC(l5*1000);
+	document.getElementById( "pp5").innerHTML	= "cost%: " + (l5/f5).toFixed(1) ;
+	document.getElementById( "pd5").innerHTML = "Profit Per: " + cvtC(l5 - f5);
+
+	document.getElementById( "pc6").innerHTML= "Total Sale: " + cvtC(l6*1000);
+	document.getElementById( "pp6").innerHTML	= "cost%: " + (l6/f6).toFixed(1) ;
+	document.getElementById( "pd6").innerHTML = "Profit Per: " + cvtC(l6 - f6);
+
+		document.getElementById( "pc7").innerHTML= "Total Sale: " + cvtC(l7*1000);
+		document.getElementById( "pp7").innerHTML	= "cost%: " + (l7/f7).toFixed(1) ;
+		document.getElementById( "pd7").innerHTML = "Profit Per: " + cvtC(l7 - f7);
+
+			document.getElementById( "pc8").innerHTML= "Total Sale: " + cvtC(l8*1000);
+			document.getElementById( "pp8").innerHTML	= "cost%: " + (l8/f8).toFixed(1) ;
+			document.getElementById( "pd8").innerHTML = "Profit Per: " + cvtC(l8 - f8);
+
+		var ts = Number(l1) + Number(l2) + Number(l3) + Number(l4)
+		+ Number(l5)+ Number(l6)+ Number(l7)+ Number(l8);
+		var tc = Number(f1) + Number(f2) + Number(f3) + Number(f4)
+		+ Number(f5)+ Number(f6)+ Number(f7)+ Number(f8);
 			ts = ts*1000;
 			tc = tc *1000;
 		document.getElementById("fca" ).innerHTML = "sellout total $: " + cvtC(ts);
@@ -162,6 +206,18 @@ var l4 = document.getElementById("lb4").value;
 
 		document.getElementById("f" ).innerHTML = "sellout cost $: " + cvtC(tc);
 		document.getElementById("favg" ).innerHTML = "sellout profit $: " + cvtC(ts-tc);
+
+
+		document.getElementById("fca1" ).innerHTML = "sellout total $: " + cvtC(ts);
+		var fcavg1 = (f5/l5) + f6/l6 + f7/l7 + f8/l8;
+		fcavg1 /= 4; fcavg1 *= 100;
+		document.getElementById("fcavg1" ).innerHTML = "Average Costs: " +fcavg1.toFixed(2) +"% ";
+		document.getElementById("ff" ).innerHTML = "sellout cost $: " + cvtC(tc);
+		document.getElementById("favg1" ).innerHTML = "sellout profit $: " + cvtC(ts-tc);
+
+		var fcavg2 = (fcavg1+fcavg)/2;
+		document.getElementById("fcavg2" ).innerHTML = "Average Costs: " +fcavg2.toFixed(2) +"% ";
+
 		  // var sellout = 0;
 			// sellout += l1+l2+l3+l4;
   var sellout = ts/7;    //fixed daily
