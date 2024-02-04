@@ -1,0 +1,41 @@
+body {
+
+	font: bold 16px Copperplate, Papyrus, fantasy;
+	background-color: #000;
+  min-height: 2000px;
+  padding-top: 40px;
+}
+p{
+	/* font-size: 10px; */
+	font-weight: 200;
+	    margin-top: 0px;
+	    margin-bottom: 0px;
+}
+/* main item name */
+.mn{	color: #ccc;
+	font: normal 16px Copperplate, Papyrus, fantasy;
+	padding: 0px 1px 0px 1px;
+	    margin-bottom: 0rem;
+			margin-top: 0rem;
+}
+
+/* item price text */
+.pr{	color: #ccc;
+	font: normal 14px Copperplate, Papyrus, fantasy;
+	padding: 0px 0px 0px 1px;
+	    margin-bottom: 0rem;
+}
+.tr{
+	padding: 0px;
+	    margin-bottom: 0px;
+}
+
+.td{
+	padding: 0px;
+	    margin-bottom: 0px;
+}
+
+
+.table {
+  --bs-table-border-color: transparent;
+}

@@ -26,13 +26,13 @@
 <div id="main" class="container">
   <div class="row" >
     <div class="col-md-3">
-    <table class="table table-hover table-borderless">
+    <table class="table table-hover table-borderless table-condensed">
     <th class="col hd text-center" colspan="2">Payroll: </th>
     <tbody>
       <tr ><td class="contact" colspan="2">
       <div class="input-group">
       <div class="input-group-addon col-md-8">Hourly $: </div>
-      <input type="text" class="form-control col-md-4" id="hrt" value="22" onblur="calc()">
+      <input type="text" class="form-control col-md-4" id="hrt" value="33" onblur="calc()">
       </div></td></tr>
       <tr ><td class="contact" colspan="2">
       <div class="input-group">
@@ -119,7 +119,7 @@
   </div>
         <!-- overhead -->
       <div class="col-md-3">
-      <table class="table table-hover  table-borderless">
+      <table class="table table-hover  table-borderless table-condensed">
       <th class="col hd text-center" colspan="2">Location: </th>
       <tbody>
         <tr ><td class="contact" colspan="2">
@@ -212,8 +212,13 @@
      <tbody>
        <tr ><td class="contact" colspan="2">
        <div class="input-group">
-       <div class="input-group-addon col-md-8">sellout max $: </div>
-       <input type="text" class="form-control col-md-4" id="som" value="10000" onblur="calc()">
+       <div class="input-group-addon col-md-8">Multiplier: (10x) </div>
+       <input type="text" class="form-control col-md-4" id="mp" value="100" onblur="calc()">
+       </div></td></tr>
+       <tr ><td class="contact" colspan="2">
+       <div class="input-group">
+       <div class="input-group-addon col-md-8">Avg Price $: </div>
+       <input type="text" class="form-control col-md-4" id="som" value="1000" onblur="calc()">
        </div></td></tr>
      <td class="col-md-7"><p id="t1" class="mn"></p></td>
      <td class="col-md-1"><p id="tt1" class="pr"></p></td>
@@ -403,17 +408,17 @@
      <!-- portions -->
         <div class="col-md-3">
         <table class="table table-hover  table-borderless">
-        <th class="col-md-3 hd text-center" colspan="2">resellx1000 </th>
+        <th class="col-md-3 hd text-center" colspan="2"><p id='x1'></p> </th>
         <tbody>
           <tr ><td class="contact" colspan="2">
           <div class="input-group col-md-12">
           <div class="input-group-addon col-md-8">Item1 cost $: </div>
-          <input type="text" class="form-control col-md-4" id="f1" value="5.5" onblur="calc()">
+          <input type="text" class="form-control col-md-4" id="f1" value="55" onblur="calc()">
           </div></td></tr>
           <tr ><td class="contact" colspan="2">
           <div class="input-group col-md-12">
           <div class="input-group-addon col-md-8">Item1 price $: </div>
-          <input type="text" class="form-control col-md-4" id="lb1" value="20" onblur="calc()">
+          <input type="text" class="form-control col-md-4" id="lb1" value="220" onblur="calc()">
           </div></td></tr>
 
                 <tr >
@@ -436,12 +441,12 @@
             <tr ><td class="contact" colspan="2">
             <div class="input-group col-md-12">
             <div class="input-group-addon col-md-8">Item2 cost $: </div>
-            <input type="text" class="form-control col-md-4" id="f2" value="4.2" onblur="calc()">
+            <input type="text" class="form-control col-md-4" id="f2" value="42" onblur="calc()">
             </div></td></tr>
             <tr ><td class="contact" colspan="2">
             <div class="input-group col-md-12">
             <div class="input-group-addon col-md-8">Item2 price $: </div>
-            <input type="text" class="form-control col-md-4" id="lb2" value="40" onblur="calc()">
+            <input type="text" class="form-control col-md-4" id="lb2" value="240" onblur="calc()">
             </div></td></tr>
                   <tr >
                   <td class="col-md-7"><p id="fa2" class="mn"></p></td>
@@ -465,18 +470,18 @@
 
              <div class="col-md-3">
              <table class="table table-hover  table-borderless">
-               <th class="col-md-3 hd text-center" colspan="2">resellx1000 </th>
+               <th class="col-md-3 hd text-center" colspan="2"><p id='x2'></p> </th>
             <tbody>
 
           <tr ><td class="contact" colspan="2">
           <div class="input-group col-md-12">
           <div class="input-group-addon col-md-8">Item3 $cost: </div>
-          <input type="text" class="form-control col-md-4" id="f3" value="12.5" onblur="calc()">
+          <input type="text" class="form-control col-md-4" id="f3" value="125" onblur="calc()">
           </div></td></tr>
           <tr ><td class="contact" colspan="2">
           <div class="input-group col-md-12">
           <div class="input-group-addon col-md-8">Item3 $price: </div>
-          <input type="text" class="form-control col-md-4" id="lb3" value="110" onblur="calc()">
+          <input type="text" class="form-control col-md-4" id="lb3" value="2110" onblur="calc()">
           </div></td></tr>
                 <tr >
                 <td class="col-md-7"><p id="fa3" class="mn"></p></td>
@@ -499,12 +504,12 @@
         <tr ><td class="contact" colspan="2">
         <div class="input-group col-md-12">
         <div class="input-group-addon col-md-8">Item4 $cost: </div>
-        <input type="text" class="form-control col-md-4" id="f4" value="10" onblur="calc()">
+        <input type="text" class="form-control col-md-4" id="f4" value="100" onblur="calc()">
         </div></td></tr>
         <tr ><td class="contact" colspan="2">
         <div class="input-group col-md-12">
         <div class="input-group-addon col-md-8">Item4 $price: </div>
-        <input type="text" class="form-control col-md-4" id="lb4" value="50" onblur="calc()">
+        <input type="text" class="form-control col-md-4" id="lb4" value="1150" onblur="calc()">
         </div></td></tr>
 
         <tr >
@@ -542,7 +547,7 @@
 
                 <div class="col-md-3">
                 <table class="table table-hover  table-borderless">
-                  <th class="col-md-3 hd text-center" colspan="2">resellx1000 </th>
+                  <th class="col-md-3 hd text-center" colspan="2"><p id='x3'></p> </th>
                <tbody>
 
              <tr ><td class="contact" colspan="2">
@@ -620,7 +625,7 @@
 
                       <div class="col-md-3">
                       <table class="table table-hover  table-borderless">
-                        <th class="col-md-3 hd text-center" colspan="2">resellx1000 </th>
+                        <th class="col-md-3 hd text-center" colspan="2"><p id='x4'></p> </th>
                      <tbody>
 
                    <tr ><td class="contact" colspan="2">
@@ -654,12 +659,12 @@
                  <tr ><td class="contact" colspan="2">
                  <div class="input-group col-md-12">
                  <div class="input-group-addon col-md-8">Item8 $cost: </div>
-                 <input type="text" class="form-control col-md-4" id="f8" value="151" onblur="calc()">
+                 <input type="text" class="form-control col-md-4" id="f8" value="1511" onblur="calc()">
                  </div></td></tr>
                  <tr ><td class="contact" colspan="2">
                  <div class="input-group col-md-12">
                  <div class="input-group-addon col-md-8">Item8 $price: </div>
-                 <input type="text" class="form-control col-md-4" id="lb8" value="1500" onblur="calc()">
+                 <input type="text" class="form-control col-md-4" id="lb8" value="15000" onblur="calc()">
                  </div></td></tr>
 
                  <tr >

@@ -17,13 +17,13 @@ function createTable(TestTitle, rows){
 	var pre = '<div class="col-md"><table class="table table-hover table-borderless"><th class="col hd text-center" colspan="2">'
 	var endtitle = '</th><tbody>'
 	var endtable = '</tbody></table></div>'
-	var pre1 = '<tr ><td class="col-md-7"><p class="mn" id="'
-	var pre2 = '" ></p></td><td class="col-md-1"><p id="'
+	var pre1 = '<tr ><td class="col-md-7"><p id="'
+	var pre2 = '" class="mn"></p></td><td class="col-md-1"><p id="'
 	var pre3 = '" class="pr"></p></td></tr>'
 			var t = pre + TestTitle + endtitle ;
 			for(let i =1; i<=rows; i++){
-				t+= pre1 + 'aa' + i +pre2;
-				t+=  'ab' + i + pre3;
+				t+= pre1 + 'm' + i +pre2;
+				t+=  'mm' + i + pre3;
 			}
 			t += endtable;
 			return t;
@@ -67,10 +67,10 @@ function calc() {
 			 	document.getElementById( "st").value = st;
 
 				//test loop
-				for (let i = 0; i < 10; i++) {
-					  document.getElementById( "aa"+ (i+1) ).innerHTML = cn[i];
-						document.getElementById( "ab"+ (i+1) ).innerHTML = i;
-						}
+				// for (let i = 0; i < 10; i++) {
+				// 	  document.getElementById( "aa"+ (i+1) ).innerHTML = cn[i];
+				// 		document.getElementById( "ab"+ (i+1) ).innerHTML = i;
+				// 		}
 
 
 					var hrt = document.getElementById("hrt").value;
@@ -134,8 +134,18 @@ function calc() {
 			var rent = sqft*sq;
 
 			var userper = sqft/50; //max capcity
+			document.getElementById("a0").innerHTML = "annual: ";
+			document.getElementById("b0").innerHTML = monthly*12;
 			document.getElementById("a1").innerHTML = "Max capacity: ";
 			document.getElementById("b1").innerHTML = userper;
+			document.getElementById("a2").innerHTML = "Max user Hours: ";
+			document.getElementById("b2").innerHTML = userper*10*7;
+			document.getElementById("a3").innerHTML = "Max hours: ";
+			document.getElementById("b3").innerHTML = userper*hoursaday*7;
+			document.getElementById("a4").innerHTML = "Active Users x10 hours: ";
+			document.getElementById("b4").innerHTML = acm*10;
+			document.getElementById("a5").innerHTML = "Average Capacity %: ";
+			document.getElementById("b5").innerHTML = (acm*10/(userper*hoursaday*7)).toFixed(4)*100;
 
 			document.getElementById("m5").innerHTML = "montly Rent: $";
 			document.getElementById("mm5").innerHTML = cvtC(rent);
@@ -143,9 +153,11 @@ function calc() {
 			document.getElementById("mm6").innerHTML = cvtC(rent*12);
 			document.getElementById("m7").innerHTML = "profit Montly: $";
 			document.getElementById("mm7").innerHTML = cvtC(total-rent-(anper*minworkers)/12);
-			document.getElementById("m8").innerHTML = "annual Profit: $";
-			document.getElementById("mm8").innerHTML = cvtC((total-rent)*12-anper*minworkers);
+			document.getElementById("m8").innerHTML = "annual OverHead: $";
+			document.getElementById("mm8").innerHTML = cvtC(rent*12 + anper*minworkers);
+			document.getElementById("m9").innerHTML = "annual Profit: $";
+			document.getElementById("mm9").innerHTML = cvtC((total-rent)*12-anper*minworkers);
 
-
+cvtC(anper*minworkers);
 
 }
