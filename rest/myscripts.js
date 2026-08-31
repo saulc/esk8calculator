@@ -28,13 +28,14 @@ function calc() {
 	document.getElementById("d1").innerHTML = getPrice(d1, wtx);
 	document.getElementById("d2").innerHTML = getPrice(d2, wtx);
 //plates
-		var p = [24, 19, 19, 17, 17, 17, 19 ];
+		var p = [24, 19, 19, 17, 17, 17, 24 ];
 		const pl = [ "Seared Ahi Tuna with Rice",
 									"Swordfish Filet with SweetPotato Fries",
 									"Seared Salmon with Rice",
 									"Grilled Chicken with Rice",
 									"bbq Chicken drumsticks with Fries",
-									"Roasted Pork with Rice"
+									"Roasted Pork with Rice", 
+									"Filet Mignon with Potatoes Au Gratin"
 								];
 
 
@@ -45,6 +46,8 @@ function calc() {
 			,"Marinated chicken breast with White or Brown Rice"
 			, "Two grilled legs finished in spicy bbq sauce with Regular, SweetPotato or Carrot Fries"
 			, "Slow roasted shredded pork shoulder with white or brown rice."
+			,"Seared tenderloin with scalloped potatoes in Béchamel Cream sauce."
+							
 		]
 
 		for (let i = 0; i < p.length; i++) {

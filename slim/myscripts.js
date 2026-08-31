@@ -70,22 +70,22 @@ document.getElementById("table").innerHTML = show(d);
 							var sn = [14, 14, 16, 16, 21, 15, 15 ];
 							var san = ["Regular", "Classic", "Cali", "Western", "Loaded", "Wrap", "Sliders"];
 							var sd = [ "Spinach, Cucumber, grilled onion and tamato.",
-												"Romain lettuce, tomato, onoins",
+												"Romain lettuce, tomato, onions, pickles",
 												"Roasted Jalapenos and Avacado",
-												"Bacon, Fried Onions and BBQ Sauce",
+												"Bacon, Onions Rings and BBQ Sauce",
 												"E - All of the above",
 												"Wrapped in Romain",
 												"3 Sliders - 1 style"
 									]
 
-					var c = [ 7, 7, 7, 6, 5, 5, 5];
+					var c = [ 7, 9, 9, 7, 5, 5, 5];
 					var cn = [
 						 "House Salad",
-						 "Sauted Vegetables",
-						 "Squash Mozzarella sticks",
+						 "Fried Shrimp",
+						 "Chicken Strips",
 						 "Onion Rings",
 						 "SweetPotato Fries",
-						 "Carrot Fries",
+						 "Curly Fries",
 						 "Fries"
 					]
 
@@ -115,11 +115,11 @@ contact();
 	document.getElementById("d2").innerHTML = getPrice(d2, wtx);
 //plates
 
-		for (let i = 0; i < p.length; i++) {
-				document.getElementById( "item"+ (i+1) ).innerHTML = pl[i];
-				document.getElementById("item"+ (i+1)+"price" ).innerHTML = getPrice(p[i], wtx);
-				document.getElementById("item"+ (i+1)+"des" ).innerHTML = pd[i];
-				}
+		// for (let i = 0; i < p.length; i++) {
+		// 		document.getElementById( "item"+ (i+1) ).innerHTML = pl[i];
+		// 		document.getElementById("item"+ (i+1)+"price" ).innerHTML = getPrice(p[i], wtx);
+		// 		document.getElementById("item"+ (i+1)+"des" ).innerHTML = pd[i];
+		// 		}
 
 		for (let i = 0; i < sn.length; i++) {
 				document.getElementById( "s"+ (i+1) ).innerHTML = san[i];
@@ -133,12 +133,7 @@ contact();
 				document.getElementById("cp"+ (i+1) ).innerHTML = getPrice(c[i], wtx);
 				}
 
-				//Appetizers
-			for (let i = 0; i < a.length; i++) {
-					document.getElementById( "a" + (i+1) ).innerHTML = a[i];
-					document.getElementById("ap"+ (i+1) ).innerHTML = getPrice(ap[i], wtx);
-					document.getElementById("ad"+ (i+1) ).innerHTML = ad[i];
-					}
+		 
 
 		//veggie
 		for (let i = 0; i < vp.length; i++) {
