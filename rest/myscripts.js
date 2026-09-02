@@ -35,7 +35,7 @@ function calc() {
 									"Grilled Chicken with Rice",
 									"bbq Chicken drumsticks with Fries",
 									"Roasted Pork with Rice", 
-									"Filet Mignon with Potatoes Au Gratin"
+									"Filet Mignon with scalloped potatoes"
 								];
 
 
@@ -46,7 +46,7 @@ function calc() {
 			,"Marinated chicken breast with White or Brown Rice"
 			, "Two grilled legs finished in spicy bbq sauce with Regular, SweetPotato or Carrot Fries"
 			, "Slow roasted shredded pork shoulder with white or brown rice."
-			,"Seared tenderloin with scalloped potatoes in Béchamel Cream sauce."
+			,"Seared tenderloin with Potatoes Au Gratin in Béchamel Cream sauce."
 							
 		]
 
@@ -67,7 +67,7 @@ function calc() {
 		// 	{ name:"Spicy bbq Pork", price:14,
 		// 				des:"Seared Salmon" } ,
 
-	var sn = [17, 12, 12, 14, 15, 11, 15 ];
+	var sn = [21, 22, 20, 17, 15, 14, 15 ];
 	var san = ["LemonPepper Tuna", "Swordfish", "Salmon",
  							"Spicy bbq Pork" , "Spicy Chicken", "Classic Chicken"];
 	var sd = [ "Seasoned and Seared ahi Tuna with lemon aioli",
@@ -91,8 +91,8 @@ function calc() {
 		var cn = [
 			"Salmon Bites",
 			"Spicy Fried Chicken Bites",
-			 "Spicy Pork Sliders",
-			 "Spring Rolls",
+			 "Spicy Pork Sliders (2)",
+			 "Spring Rolls (2)",
 			 "SeaWeed Rolls",
 			 "House Salad",
 			 "Fries"
@@ -103,9 +103,9 @@ function calc() {
 				}
 
 		//veggie
-		var vp = [15, 13]
-		const v = [ "Sauted Vegetables and Mixed KimChi","Sauted Vegetables"];
-		const vd = ["Mushrooms, squash, peppers, onoins, artichokes; Spinach, cucumber, sprouts, garlic with light Spicy korean sauce",
+		var vp = [17, 15, 13]
+		const v = [ "More Veggies", "Sauted Vegetables and Mixed KimChi","Sauted Vegetables"]
+		const vd = ["rabbit food of some sort...", "Mushrooms, squash, peppers, onoins, artichokes; Spinach, cucumber, sprouts, garlic with light Spicy korean sauce",
 		"Mushrooms, squash, peppers, onoins, artichokes "]
 		for (let i = 0; i < vp.length; i++) {
 				document.getElementById( "v" + (i+1) ).innerHTML = v[i];
