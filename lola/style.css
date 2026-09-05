@@ -28,6 +28,7 @@ body {
 
 /* header */
 .topbar{
+	background-color: #777;
 	text-align: center;
 	font: bold 46px "Montserrat", sans-serif;;
 }
