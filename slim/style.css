@@ -18,8 +18,9 @@ body {
 
 /* header */
 .topbar{
-	text-align: center;
-	font: bold 46px Copperplate, Papyrus, fantasy;
+	text-align: center; 
+	color: #fff;
+	font: bold 66px Copperplate, Papyrus, fantasy;
 }
 
 /* Title bars */
