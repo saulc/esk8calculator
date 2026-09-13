@@ -95,6 +95,29 @@ function calc() {
 
 	document.getElementById("cc10" ).innerHTML = cvtC(fix);
 
+
+	//location estimate
+
+	var cn = [
+			  "seats:", "estimated income:", "projected profit:", "", ""
+
+		]
+		for (let i = 0; i < cn.length; i++) {
+				document.getElementById( "litem"+ (i+1) ).innerHTML = cn[i];
+				// document.getElementById("cp"+ (i+1) ).innerHTML = getPrice(c[i], wtx);
+				}
+
+		var sqs = document.getElementById("sqs").value;
+		var seatest = document.getElementById("seatval").value;
+
+		var seats = sqft/sqs;
+		var incomeprojection = seats*seatest;
+		var profitprojection = incomeprojection - fix
+			document.getElementById("lc1" ).innerHTML = sqft/sqs;
+			document.getElementById("lc2" ).innerHTML = cvtC(incomeprojection);
+			document.getElementById("lc3" ).innerHTML = cvtC(profitprojection);
+			// document.getElementById("lc4" ).innerHTML = cvtC((sqft*monthrate)/4);
+			// document.getElementById("lc5" ).innerHTML = cvtC((sqft*monthrate)/4/7);
 //Food
 
 var cn = [
