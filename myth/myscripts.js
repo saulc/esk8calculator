@@ -121,72 +121,76 @@ function calc() {
 //Food
 
 var cn = [
-	"item1 Total: ", "item2 Total: ", "item3 Total: " , "item4 Total: "
+	"item1 Total: ", "item2 Total: ", "item3 Total: " , "item4 Total: "]
 
-]
-for (let i = 0; i < cn.length; i++) {
+var numItems = 1;
+for (let i = 0; i < numItems; i++) {
 	document.getElementById( "fa"+ (i+1) ).innerHTML = cn[i];
 		// document.getElementById( "fb"+ (i+1) ).innerHTML = cn[i];
 	}
 
 var f1 = document.getElementById("f1").value;
 var l1 = document.getElementById("lb1").value;
-var f2 = document.getElementById("f2").value;
-var l2 = document.getElementById("lb2").value;
-var f3 = document.getElementById("f3").value;
-var l3 = document.getElementById("lb3").value;
-var f4 = document.getElementById("f4").value;
-var l4 = document.getElementById("lb4").value;
+// var f2 = document.getElementById("f2").value;
+// var l2 = document.getElementById("lb2").value;
+// var f3 = document.getElementById("f3").value;
+// var l3 = document.getElementById("lb3").value;
+// var f4 = document.getElementById("f4").value;
+// var l4 = document.getElementById("lb4").value;
 
 var p1 = document.getElementById("p1").value;
-var p2 = document.getElementById("p2").value;
-var p3 = document.getElementById("p3").value;
-var p4 = document.getElementById("p4").value;
+// var p2 = document.getElementById("p2").value;
+// var p3 = document.getElementById("p3").value;
+// var p4 = document.getElementById("p4").value;
 
 var pe1 = document.getElementById("pe1").value *.905;
-var pe2 = document.getElementById("pe2").value *.905;
-var pe3 = document.getElementById("pe3").value *.905;
-var pe4 = document.getElementById("pe4").value *.905;
-var ds = f4*l4 + f3*l3 + f2*l2 + f1*l1;
+// var pe2 = document.getElementById("pe2").value *.905;
+// var pe3 = document.getElementById("pe3").value *.905;
+// var pe4 = document.getElementById("pe4").value *.905;
+// var ds = f4*l4 + f3*l3 + f2*l2 + f1*l1;
+var ds = f1*l1;
 
 	document.getElementById( "fb1").innerHTML = cvtC( f1*l1);
-	document.getElementById( "fb2").innerHTML = cvtC( f2*l2);
-	document.getElementById( "fb3").innerHTML = cvtC( f3*l3);
-	document.getElementById( "fb4").innerHTML = cvtC( f4*l4);
+	// document.getElementById( "fb2").innerHTML = cvtC( f2*l2);
+	// document.getElementById( "fb3").innerHTML = cvtC( f3*l3);
+	// document.getElementById( "fb4").innerHTML = cvtC( f4*l4);
 
 	document.getElementById( "pa1").innerHTML = "Portions: " + (16*l1/p1).toFixed(1);
 	document.getElementById( "pb1").innerHTML = "Cost Per: " + cvtC(p1/16*f1);
-	document.getElementById( "pa2").innerHTML = "Portions: " + (16*l2/p2).toFixed(1);
-	document.getElementById( "pb2").innerHTML = "Cost Per: " + cvtC(p2/16*f2);
-	document.getElementById( "pa3").innerHTML = "Portions: " + (16*l3/p3).toFixed(1);
-	document.getElementById( "pb3").innerHTML = "Cost Per: " + cvtC(p3/16*f3);
-	document.getElementById( "pa4").innerHTML = "Portions: " + (16*l4/p4).toFixed(1);
-	document.getElementById( "pb4").innerHTML = "Cost Per: " + cvtC(p4/16*f4);
+	// document.getElementById( "pa2").innerHTML = "Portions: " + (16*l2/p2).toFixed(1);
+	// document.getElementById( "pb2").innerHTML = "Cost Per: " + cvtC(p2/16*f2);
+	// document.getElementById( "pa3").innerHTML = "Portions: " + (16*l3/p3).toFixed(1);
+	// document.getElementById( "pb3").innerHTML = "Cost Per: " + cvtC(p3/16*f3);
+	// document.getElementById( "pa4").innerHTML = "Portions: " + (16*l4/p4).toFixed(1);
+	// document.getElementById( "pb4").innerHTML = "Cost Per: " + cvtC(p4/16*f4);
 
 
 	document.getElementById( "pc1").innerHTML= "Total Sale: " + cvtC(pe1*16*l1/p1);
 	document.getElementById( "pp1").innerHTML	= "Foodcost%: " + (100*(p1/16*f1)/pe1).toFixed(1) ;
 	document.getElementById( "pd1").innerHTML = "Profit Per: " + cvtC(pe1 - p1/16*f1);
 
-	document.getElementById( "pc2").innerHTML= "Total Sale: " + cvtC(pe2*16*l2/p2);
-	document.getElementById( "pp2").innerHTML	= "Foodcost%: " + (100*(p2/16*f2)/pe2).toFixed(1) ;
-	document.getElementById( "pd2").innerHTML = "Profit Per: " + cvtC(pe2 - p2/16*f2);
+	// document.getElementById( "pc2").innerHTML= "Total Sale: " + cvtC(pe2*16*l2/p2);
+	// document.getElementById( "pp2").innerHTML	= "Foodcost%: " + (100*(p2/16*f2)/pe2).toFixed(1) ;
+	// document.getElementById( "pd2").innerHTML = "Profit Per: " + cvtC(pe2 - p2/16*f2);
 
-	document.getElementById( "pc3").innerHTML= "Total Sale: " + cvtC(pe3*16*l3/p3);
-	document.getElementById( "pp3").innerHTML	= "Foodcost%: " + (100*(p3/16*f3)/pe3).toFixed(1) ;
-	document.getElementById( "pd3").innerHTML = "Profit Per: " + cvtC(pe3 - p3/16*f3);
+	// document.getElementById( "pc3").innerHTML= "Total Sale: " + cvtC(pe3*16*l3/p3);
+	// document.getElementById( "pp3").innerHTML	= "Foodcost%: " + (100*(p3/16*f3)/pe3).toFixed(1) ;
+	// document.getElementById( "pd3").innerHTML = "Profit Per: " + cvtC(pe3 - p3/16*f3);
 
-	document.getElementById( "pc4").innerHTML= "Total Sale: " + cvtC(pe4*16*l4/p4);
-	document.getElementById( "pp4").innerHTML	= "Foodcost%: " + (100*(p4/16*f4)/pe4).toFixed(1) ;
-	document.getElementById( "pd4").innerHTML = "Profit Per: " + cvtC(pe4 - p4/16*f4);
+	// document.getElementById( "pc4").innerHTML= "Total Sale: " + cvtC(pe4*16*l4/p4);
+	// document.getElementById( "pp4").innerHTML	= "Foodcost%: " + (100*(p4/16*f4)/pe4).toFixed(1) ;
+	// document.getElementById( "pd4").innerHTML = "Profit Per: " + cvtC(pe4 - p4/16*f4);
 
 		document.getElementById("fca" ).innerHTML = "Average FoodCosts : "
-		var fcavg = (100*(p4/16*f4)/pe4)+(100*(p3/16*f3)/pe3)+(100*(p2/16*f2)/pe2)+(100*(p1/16*f1)/pe1);
-		fcavg /= 4;
+		// var fcavg = (100*(p4/16*f4)/pe4)+(100*(p3/16*f3)/pe3)+(100*(p2/16*f2)/pe2)+(100*(p1/16*f1)/pe1);
+		// fcavg /= 4;
+		var fcavg = 100*(p1/16*f1)/pe1;
 		document.getElementById("fcavg" ).innerHTML = fcavg.toFixed(2) +"% ";
 
-  var sellout = pe4*16*l4/p4 + pe3*16*l3/p3 + pe2*16*l2/p2 + pe1*16*l1/p1;
-	var totalportions = (16*l4/p4 + 16*l3/p3 + 16*l2/p2 + 16*l1/p1);
+  // var sellout = pe4*16*l4/p4 + pe3*16*l3/p3 + pe2*16*l2/p2 + pe1*16*l1/p1;
+  var sellout = pe1*16*l1/p1;
+	// var totalportions = (16*l4/p4 + 16*l3/p3 + 16*l2/p2 + 16*l1/p1);
+	var totalportions =  16*l1/p1;
 	document.getElementById( "t1").innerHTML = "SellOut Total: "
 	document.getElementById( "tt1").innerHTML = cvtC( sellout );
 
@@ -205,8 +209,11 @@ var ds = f4*l4 + f3*l3 + f2*l2 + f1*l1;
 	var tgc = document.getElementById("tgc").value;
 	var bulkpercent = document.getElementById("bc").value;
 	bulkpercent = bulkpercent/100;
-	var bulk = bulkpercent*(f4*l4 + f3*l3 + f2*l2 + f1*l1);
-	var td = Number(tgc)+Number(wc)+(1+bulkpercent)*(f4*l4 + f3*l3 + f2*l2 + f1*l1);
+
+	// var bulk = bulkpercent*(f4*l4 + f3*l3 + f2*l2 + f1*l1);
+	var bulk = bulkpercent*( f1*l1);
+	// var td = Number(tgc)+Number(wc)+(1+bulkpercent)*(f4*l4 + f3*l3 + f2*l2 + f1*l1);
+	var td = Number(tgc)+Number(wc)+(1+bulkpercent)*( f1*l1);
 	var netover =  ae/daysayear + td + ((sqft*monthrate)/4/7) + (anper*minworkers)/daysayear;
 	//daily ex + rent + payroll
 	var profit =  sellout - netover;
