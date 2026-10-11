@@ -31,8 +31,8 @@ function cvtC(p){
         // document.querySelectorAll('.card:nth-child(1) input').forEach(i => i.value = '');
   }
 
-    function deleteItem(id) { items = items.filter(i => i.id !== id); saveAndRender(); }
-    
+   function deleteItem(id) { items = items.filter(i => i.id !== id); saveAndRender(); }
+
    function saveAndRender() {
         localStorage.setItem('acmeitems', JSON.stringify(items)); 
         render();
@@ -44,12 +44,22 @@ function cvtC(p){
         let totalWeeklyGross = 0;
 
         items.forEach(item => {
-            const weeklyProfit = 0;
-            totalWeeklyGross += weeklyProfit;
+        	const lbs = item[2];
+        	const portion = item[3];
+        	const price = item.price;
+        	const qty = lbs*16 / portion;
+        	const totalcosts = item.cost*lbs;
+            const itemProfit = qty * price - totalcosts; 
+
             itemTbody.innerHTML += `
-                <tr>
-                    <td>${item.name}<br><small style="color:var(--text-muted)">${item.qty} units/wk</small></td>
-                    <td class="success-text">$${weeklyProfit.toLocaleString()}</td>
+                <tr colspan="12">
+                    <td>$${item.cost} </td>
+                    <td>${item.lbs} lbs/day</td>
+                    <td>$${item.price} </td>
+                    <td>${item.portion} oz</td>
+            		<td>${item.lbs*16/item.portion} portions</td>
+            		<td>$${totalcosts} total costs<td>
+                    <td class="success-text">$${itemProfit.toLocaleString()}</td>
                     <td style="text-align:right"><button class="delete-btn" onclick="deleteItem(${item.id})">✕</button></td>
                 </tr>`;
         });
