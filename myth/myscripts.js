@@ -49,17 +49,19 @@ function cvtC(p){
         	const price = item.price;
         	const qty = lbs*16 / portion;
         	const totalcosts = item.cost*lbs;
-            const itemProfit = qty * price - totalcosts; 
+        	var totalsale = qty * price;
+            var itemProfit = qty * price - totalcosts; 
 
             itemTbody.innerHTML += `
                 <tr colspan="12">
                     <td>$${item.cost} </td>
                     <td>${item.lbs} lbs/day</td>
-                    <td>$${item.price} </td>
                     <td>${item.portion} oz</td>
+                    <td>$${item.price} </td>
+            		<td>Total $${item.cost*item.lbs}</td>
             		<td>${item.lbs*16/item.portion} portions</td>
-            		<td>$${totalcosts} total costs<td>
-                    <td class="success-text">$${itemProfit.toLocaleString()}</td>
+            		<td>$${item.lbs*16/item.portion*item.price} total sale<td>
+                    <td>food costs ${(item.price/(item.cost *item.portion/16)).toFixed(2)} %</td>
                     <td style="text-align:right"><button class="delete-btn" onclick="deleteItem(${item.id})">✕</button></td>
                 </tr>`;
         });
