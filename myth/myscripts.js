@@ -14,12 +14,47 @@ function cvtC(p){
 	 s+= Number(p.toFixed(2) ).toLocaleString();
 	return s;
 }
+ 
 
-function addItem(){
+  let items = JSON.parse(localStorage.getItem('acmeitems')) || []; 
 
+  function addItem() {
+        const cost = parseFloat(document.getElementById('f1').value);
+        const lbs = parseFloat(document.getElementById('lb1').value);
+        const portion = parseFloat(document.getElementById('p1').value);
+        const price = parseFloat(document.getElementById('pe1').value);
 
-}
+        if (isNaN(cost) || isNaN(lbs) || isNaN(price) || isNaN(portion)) return alert("Missing data");
 
+        items.push({ id: Date.now(), cost, lbs, portion, price });
+        saveAndRender();
+        // document.querySelectorAll('.card:nth-child(1) input').forEach(i => i.value = '');
+  }
+
+    function deleteItem(id) { items = items.filter(i => i.id !== id); saveAndRender(); }
+    
+   function saveAndRender() {
+        localStorage.setItem('acmeitems', JSON.stringify(items)); 
+        render();
+    }
+
+    function render() {
+        const itemTbody = document.getElementById('acmeitembody');
+        itemTbody.innerHTML = '';
+        let totalWeeklyGross = 0;
+
+        items.forEach(item => {
+            const weeklyProfit = 0;
+            totalWeeklyGross += weeklyProfit;
+            itemTbody.innerHTML += `
+                <tr>
+                    <td>${item.name}<br><small style="color:var(--text-muted)">${item.qty} units/wk</small></td>
+                    <td class="success-text">$${weeklyProfit.toLocaleString()}</td>
+                    <td style="text-align:right"><button class="delete-btn" onclick="deleteItem(${item.id})">✕</button></td>
+                </tr>`;
+        });
+
+    }
 
 function calc() {
 
@@ -189,7 +224,7 @@ var ds = f1*l1;
 		// var fcavg = (100*(p4/16*f4)/pe4)+(100*(p3/16*f3)/pe3)+(100*(p2/16*f2)/pe2)+(100*(p1/16*f1)/pe1);
 		// fcavg /= 4;
 		var fcavg = 100*(p1/16*f1)/pe1;
-		document.getElementById("fa6" ).innerHTML = "Average FoodCosts : " + fcavg.toFixed(2) +"% ";
+		document.getElementById("fca" ).innerHTML = "Average FoodCosts : " + fcavg.toFixed(2) +"% ";
 
   // var sellout = pe4*16*l4/p4 + pe3*16*l3/p3 + pe2*16*l2/p2 + pe1*16*l1/p1;
   var sellout = pe1*16*l1/p1;
