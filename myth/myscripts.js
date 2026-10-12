@@ -58,13 +58,15 @@ function cvtC(p){
                     <td>${item.lbs} lbs/day</td>
                     <td>${item.portion} oz</td>
                     <td>$${item.price} </td>
-            		<td>Total $${item.cost*item.lbs}</td>
+            		<td>Total Costs $${item.cost*item.lbs}</td>
             		<td>${item.lbs*16/item.portion} portions</td>
-            		<td>$${item.lbs*16/item.portion*item.price} total sale<td>
-                    <td>food costs ${(item.price/(item.cost *item.portion/16)).toFixed(2)} %</td>
+            		<td>$${(item.lbs*16/item.portion*(item.price*.905))} total sale</td>
+            		<td>Profit per $${((item.price*.905) - item.cost/16*item.portion).toFixed(2)}</td>
+                    <td>food costs ${(100*(item.portion/16*item.cost)/(item.price*.905)).toFixed(2)} %</td>
                     <td style="text-align:right"><button class="delete-btn" onclick="deleteItem(${item.id})">✕</button></td>
                 </tr>`;
         });
+ 
 
     }
 
@@ -218,6 +220,7 @@ var ds = f1*l1;
 
 	document.getElementById( "fa3").innerHTML= "Total Sale: " + cvtC(pe1*16*l1/p1);
 	document.getElementById( "fa4").innerHTML	= "Foodcost%: " + (100*(p1/16*f1)/pe1).toFixed(1) ;
+
 	document.getElementById( "fa5").innerHTML = "Profit Per: " + cvtC(pe1 - p1/16*f1);
 
 	// document.getElementById( "pc2").innerHTML= "Total Sale: " + cvtC(pe2*16*l2/p2);
@@ -350,4 +353,5 @@ var ds = f1*l1;
 			document.getElementById( "s9").innerHTML = "Avg mins/plate: ";
 			document.getElementById( "ss9").innerHTML = (60/((selloutrate*totalportions)/hoursaday)).toFixed(2);
 
+			saveAndRender();
 }
