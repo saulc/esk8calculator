@@ -52,7 +52,7 @@ function cvtC(p){
         	var totalsale = qty * price;
             var itemProfit = qty * price - totalcosts; 
 
-            itemTbody.innerHTML += `
+            itemTbody.innerHTML += ` 
                 <tr colspan="12">
                     <td>$${item.cost} </td>
                     <td>${item.lbs} lbs/day</td>
@@ -181,6 +181,18 @@ function calc() {
 // 	document.getElementById( "fa"+ (i+1) ).innerHTML = cn[i];
 // 		// document.getElementById( "fb"+ (i+1) ).innerHTML = cn[i];
 // 	}
+
+			//food costs
+
+	saveAndRender();
+
+			const table = document.getElementById("acmeitembody");
+        for (let i = 0; i < table.rows.length; i++) {
+    		const row = table.rows[i];
+    		for(let j = 0; j<row.cells.length; j++)
+ 		   		console.log(row.cells[j].textContent); 
+    	}
+
 
 var f1 = document.getElementById("f1").value;
 var l1 = document.getElementById("lb1").value;
@@ -353,5 +365,6 @@ var ds = f1*l1;
 			document.getElementById( "s9").innerHTML = "Avg mins/plate: ";
 			document.getElementById( "ss9").innerHTML = (60/((selloutrate*totalportions)/hoursaday)).toFixed(2);
 
-			saveAndRender();
+		
+
 }
