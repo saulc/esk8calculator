@@ -181,6 +181,8 @@ function calc() {
 	saveAndRender();
 var totalcosts = 0;
 var foodcostsavg = 0
+var sellout = 0;
+var totalportions = 0;
 	const table = document.getElementById("acmeitembody");
         for (let i = 0; i < table.rows.length; i++) {
     		const row = table.rows[i];
@@ -188,6 +190,10 @@ var foodcostsavg = 0
     		// for(let j = 0; j<row.cells.length; j++){
  		   		// console.log(row.cells[j].textContent); 
     			totalcosts += parseFloat(row.cells[4].textContent.substring(13));
+
+				totalportions += parseInt(row.cells[5].textContent.split(' ')[0]);
+
+				sellout += parseFloat(row.cells[6].textContent.substring(1, 5).split(' ')[0]);
 
 				foodcostsavg += parseFloat(row.cells[8].textContent.substring(11, 16));
     		// }
@@ -222,9 +228,9 @@ var pe1 = document.getElementById("pe1").value *.905;
 		document.getElementById("fca" ).innerHTML = "Average FoodCosts : " + foodcostsavg.toFixed(2) +"% ";
 
   // var sellout = pe4*16*l4/p4 + pe3*16*l3/p3 + pe2*16*l2/p2 + pe1*16*l1/p1;
-  var sellout = pe1*16*l1/p1;
+  // var sellout = pe1*16*l1/p1;
 	// var totalportions = (16*l4/p4 + 16*l3/p3 + 16*l2/p2 + 16*l1/p1);
-	var totalportions =  16*l1/p1;
+	// var totalportions =  16*l1/p1;
 	document.getElementById( "t1").innerHTML = "SellOut Total: "
 	document.getElementById( "tt1").innerHTML = cvtC( sellout );
 
