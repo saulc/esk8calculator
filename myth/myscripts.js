@@ -43,14 +43,7 @@ function cvtC(p){
         itemTbody.innerHTML = '';
         let totalWeeklyGross = 0;
 
-        items.forEach(item => {
-        	const lbs = item[2];
-        	const portion = item[3];
-        	const price = item.price;
-        	const qty = lbs*16 / portion;
-        	const totalcosts = item.cost*lbs;
-        	var totalsale = qty * price;
-            var itemProfit = qty * price - totalcosts; 
+        items.forEach(item => { 
 
             itemTbody.innerHTML += ` 
                 <tr colspan="12">
@@ -185,12 +178,14 @@ function calc() {
 			//food costs
 
 	saveAndRender();
-
-			const table = document.getElementById("acmeitembody");
+var totalcosts = 0;
+	const table = document.getElementById("acmeitembody");
         for (let i = 0; i < table.rows.length; i++) {
     		const row = table.rows[i];
+    		
     		for(let j = 0; j<row.cells.length; j++)
- 		   		console.log(row.cells[j].textContent); 
+ 		   		// console.log(row.cells[j].textContent); 
+    			totalcosts += parseFloat(row.cells[4].textContent.substring(13));
     	}
 
 
@@ -213,7 +208,7 @@ var pe1 = document.getElementById("pe1").value *.905;
 // var pe3 = document.getElementById("pe3").value *.905;
 // var pe4 = document.getElementById("pe4").value *.905;
 // var ds = f4*l4 + f3*l3 + f2*l2 + f1*l1;
-var ds = f1*l1;
+// var ds = totalcosts;
 
 	document.getElementById( "fa1").innerHTML = "Total: " + cvtC( f1*l1);
 	// document.getElementById( "fb2").innerHTML = cvtC( f2*l2);
@@ -287,7 +282,7 @@ var ds = f1*l1;
 	var netrev =  sellout*daysayear; //*profit+ netover*7*52;
 
 	document.getElementById( "t7").innerHTML = "Daily Spend: "
-	document.getElementById( "tt7").innerHTML = cvtC( ds );
+	document.getElementById( "tt7").innerHTML = cvtC( totalcosts );
 
 	document.getElementById( "t8").innerHTML = "Bulk Spend: "+ "@ " + bulkpercent*100 + "% "
 	document.getElementById( "tt8").innerHTML = cvtC( bulk );
