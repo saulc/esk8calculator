@@ -27,11 +27,12 @@ function cvtC(p){
         if (isNaN(cost) || isNaN(lbs) || isNaN(price) || isNaN(portion)) return alert("Missing data");
 
         items.push({ id: Date.now(), cost, lbs, portion, price });
-        saveAndRender();
+        // saveAndRender();
+        calc();
         // document.querySelectorAll('.card:nth-child(1) input').forEach(i => i.value = '');
   }
 
-   function deleteItem(id) { items = items.filter(i => i.id !== id); saveAndRender(); }
+   function deleteItem(id) { items = items.filter(i => i.id !== id); calc(); }
 
    function saveAndRender() {
         localStorage.setItem('acmeitems', JSON.stringify(items)); 
@@ -179,15 +180,20 @@ function calc() {
 
 	saveAndRender();
 var totalcosts = 0;
+var foodcostsavg = 0
 	const table = document.getElementById("acmeitembody");
         for (let i = 0; i < table.rows.length; i++) {
     		const row = table.rows[i];
     		
-    		for(let j = 0; j<row.cells.length; j++)
+    		// for(let j = 0; j<row.cells.length; j++){
  		   		// console.log(row.cells[j].textContent); 
     			totalcosts += parseFloat(row.cells[4].textContent.substring(13));
-    	}
 
+				foodcostsavg += parseFloat(row.cells[8].textContent.substring(11, 16));
+    		// }
+
+    	}
+    	foodcostsavg /= (table.rows.length);
 
 var f1 = document.getElementById("f1").value;
 var l1 = document.getElementById("lb1").value;
@@ -245,8 +251,8 @@ var pe1 = document.getElementById("pe1").value *.905;
 		// document.getElementById("fa6" ).innerHTML = 
 		// var fcavg = (100*(p4/16*f4)/pe4)+(100*(p3/16*f3)/pe3)+(100*(p2/16*f2)/pe2)+(100*(p1/16*f1)/pe1);
 		// fcavg /= 4;
-		var fcavg = 100*(p1/16*f1)/pe1;
-		document.getElementById("fca" ).innerHTML = "Average FoodCosts : " + fcavg.toFixed(2) +"% ";
+		// var fcavg = 100*(p1/16*f1)/pe1;
+		document.getElementById("fca" ).innerHTML = "Average FoodCosts : " + foodcostsavg.toFixed(2) +"% ";
 
   // var sellout = pe4*16*l4/p4 + pe3*16*l3/p3 + pe2*16*l2/p2 + pe1*16*l1/p1;
   var sellout = pe1*16*l1/p1;
