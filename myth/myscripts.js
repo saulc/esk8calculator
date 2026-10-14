@@ -54,7 +54,7 @@ function cvtC(p){
                     <td>$${item.price} </td>
             		<td>Total Costs $${item.cost*item.lbs}</td>
             		<td>${item.lbs*16/item.portion} portions</td>
-            		<td>$${(item.lbs*16/item.portion*(item.price*.905))} total sale</td>
+            		<td>$${(item.lbs*16/item.portion*(item.price*.905)).toFixed(2)} total sale</td>
             		<td>Profit per $${((item.price*.905) - item.cost/16*item.portion).toFixed(2)}</td>
                     <td>food costs ${(100*(item.portion/16*item.cost)/(item.price*.905)).toFixed(2)} %</td>
                     <td style="text-align:right"><button class="delete-btn" onclick="deleteItem(${item.id})">✕</button></td>
