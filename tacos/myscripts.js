@@ -68,24 +68,24 @@ document.getElementById("table").innerHTML = show(d);
 						]
 
 							var sn = [14, 14, 16, 16, 21, 15, 15 ];
-							var san = ["Asada", "Al pastor", "Pollo", "Buche", "Lengua", "Cabeza", "Tripe"];
+							var san = ["Asada", "Al pastor", "Pollo", "Pescado", "Camaron", "Cabeza", "Tripe"];
 							var sd = [ "Beef steak.",
 												"Marinated Pork",
 												"Chicken",
-												"pork stomach",
-												"Beef toungue",
+												"Fish",
+												"Shrimp",
 												"Beef cheek meat",
 												"Beef intestine"
 									]
 
-					var c = [ 9, 12, 11, 4, 5, 4, 5];
+					var c = [ 9, 12, 11, 5, 4, 4, 5];
 					var cn = [
 						 "Quesadilla",
 						 "Quesadilla + Meat",
 						 "Torta",
-						 "Tamale",
 						 "Sope",
-						 "Rice or beans",
+						 "Rice",
+						 "Beans",
 						 "Fries"
 					]
 

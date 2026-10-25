@@ -39,7 +39,7 @@ body {
 .mn{
 	color: #fff;
 	font: normal 21px "Russo One", Papyrus, fantasy;
-	padding: 0px 15px 0px 15px;
+	padding: 0px 5px 0px 5px;
 	margin-bottom: 0rem;
 }
 
@@ -57,10 +57,15 @@ body {
 	border-style: hidden;
 }
 
+.equal-width-table td {
+    width: 33%; /* Change this based on your number of columns (e.g., 3 columns = 33.33%) */
+  }
+
+
 /* item description indent */
 .des{
 	color: #fff;
-	padding: .5em 15px 0px 25px;
+	padding: .5em 25px 0px 5px;
 	margin-bottom: 0rem;
 	font: italic 16px "Russo One", Papyrus, fantasy;
 }
