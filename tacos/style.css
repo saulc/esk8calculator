@@ -58,7 +58,7 @@ body {
 }
 
 .equal-width-table td {
-    width: 33%; /* Change this based on your number of columns (e.g., 3 columns = 33.33%) */
+    width: 25%; /* Change this based on your number of columns (e.g., 3 columns = 33.33%) */
   }
 
 

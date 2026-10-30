@@ -67,8 +67,9 @@ document.getElementById("table").innerHTML = show(d);
 
 						]
 
+							var st = [4, 4, 4, 5, 5, 5, 5 ];
 							var sn = [14, 14, 16, 16, 21, 15, 15 ];
-							var san = ["Asada", "Al pastor", "Pollo", "Pescado", "Camaron", "Cabeza", "Tripe"];
+							var san = ["Asada", "Al pastor", "Pollo", "Pescado", "Camarón", "Cabeza", "Tripe"];
 							var sd = [ "Beef steak.",
 												"Marinated Pork",
 												"Chicken",
@@ -121,6 +122,7 @@ contact();
 		for (let i = 0; i < sn.length; i++) {
 				document.getElementById( "s"+ (i+1) ).innerHTML = san[i];
 				document.getElementById("sp"+ (i+1) ).innerHTML = getPrice(sn[i], wtx);
+				document.getElementById("st"+ (i+1) ).innerHTML = getPrice(st[i], wtx);
 				document.getElementById("sd"+ (i+1) ).innerHTML = sd[i];
 				}
 

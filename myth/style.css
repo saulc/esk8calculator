@@ -51,6 +51,9 @@ body {
 	    margin-bottom: 0rem;
 }
 
+.equal-width-table td {
+    width: 11%; /* Change this based on your number of columns (e.g., 3 columns = 33.33%) */
+  }
 
 /* table row indent */
 .tr{

@@ -47,7 +47,7 @@ function cvtC(p){
         items.forEach(item => { 
 
             itemTbody.innerHTML += ` 
-                <tr colspan="12">
+                <tr colspan="15">
                     <td>$${item.cost} </td>
                     <td>${item.lbs} lbs/day</td>
                     <td>${item.portion} oz</td>
